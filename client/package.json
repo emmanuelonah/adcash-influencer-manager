@@ -1,0 +1,113 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "description": "Influencers management system",
+  "author": "emmanuelonah",
+  "license": "MIT",
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "dev": "react-scripts start",
+    "build": "react-scripts build",
+    "build:for:server": "BUILD_PATH=../server/public/client-build react-scripts build",
+    "test": "react-scripts test",
+    "test:cv": "yarn run test --coverage --watchAll=false",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "sb": "storybook dev -p 6006",
+    "b:sb": "storybook build",
+    "pkgs:audit": " yarn audit --json > audit.json",
+    "perf:audit": "npx lighthouse http://localhost:3000/ --output html --output-path ./performance.html",
+    "pre:commit": "yarn run lint",
+    "pre:push": "yarn run test:cv && yarn run build",
+    "prepare": "cd .. && husky install client/.husky",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "@styled-icons/material-outlined": "^10.47.0",
+    "@tanstack/react-query": "^5.62.14",
+    "axios": "^1.7.9",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.1.1",
+    "react-scripts": "5.0.1",
+    "styled-components": "^6.1.14",
+    "web-vitals": "^2.1.0"
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "^3.2.3",
+    "@eslint/js": "^9.17.0",
+    "@storybook/addon-essentials": "^8.4.7",
+    "@storybook/addon-interactions": "^8.4.7",
+    "@storybook/addon-onboarding": "^8.4.7",
+    "@storybook/blocks": "^8.4.7",
+    "@storybook/preset-create-react-app": "^8.4.7",
+    "@storybook/react": "^8.4.7",
+    "@storybook/react-webpack5": "^8.4.7",
+    "@storybook/test": "^8.4.7",
+    "@tanstack/react-query-devtools": "^5.62.14",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^13.0.0",
+    "@testing-library/user-event": "^13.2.1",
+    "@types/jest": "^27.0.1",
+    "@types/node": "^16.7.13",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "eslint": "^9.17.0",
+    "eslint-plugin-react": "^7.37.3",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-storybook": "^0.11.2",
+    "globals": "^15.14.0",
+    "husky": "^8.0.0",
+    "prettier": "3.4.2",
+    "prop-types": "^15.8.1",
+    "storybook": "^8.4.7",
+    "typescript": "^4.4.2",
+    "typescript-eslint": "^8.19.0",
+    "webpack": "^5.97.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "jest": {
+    "transformIgnorePatterns": [
+      "/node_modules/",
+      "/node_modules/(?!(axios)/)"
+    ],
+    "moduleNameMapper": {
+      "\\.(css|less|scss|sass)$": "identity-obj-proxy",
+      "axios": "axios/dist/node/axios.cjs"
+    },
+    "coveragePathIgnorePatterns": [
+      "./node_modules",
+      "./.storybook",
+      "./coverage",
+      "./public",
+      "./build",
+      "./src/index.tsx",
+      "./src/app.tsx",
+      ".styles.(ts|tsx)$",
+      ".svg.(ts|tsx)$",
+      ".stories.(ts|tsx)$",
+      ".presenter.(tsx|ts)",
+      "index.route.tsx",
+      "report-web-vitals.config.ts"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:storybook/recommended"
+    ]
+  }
+}
