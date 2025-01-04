@@ -1,0 +1,64 @@
+name: Adcash Influence Manager CI
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  suite:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20.9.0'
+      # server
+      - name: Install packages
+        run: |
+          cd server
+          yarn install --ignore-scripts
+
+      - name: Run ESLint
+        run: yarn run lint
+        working-directory: ./server
+
+      - name: Run UnitTest
+        env:
+          CI: false
+        run: yarn run test:cv
+        working-directory: ./server
+
+      - name: Run BuildProject
+        env:
+          CI: false
+        run: yarn run build
+        working-directory: ./server
+
+      # client
+      - name: Install packages
+        run: |
+          cd client
+          yarn install --ignore-scripts
+
+      - name: Run ESLint
+        run: yarn run lint
+        working-directory: ./client
+
+      - name: Run UnitTest
+        env:
+          CI: false
+        run: yarn run test:cv
+        working-directory: ./client
+
+      - name: Run BuildProject
+        env:
+          CI: false
+        run: yarn run build
+        working-directory: ./client
