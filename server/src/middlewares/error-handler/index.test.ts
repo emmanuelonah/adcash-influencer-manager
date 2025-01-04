@@ -73,7 +73,7 @@ describe('errorHandler middleware', () => {
         expect(jsonMock).toHaveBeenCalledWith({
             success: false,
             statusCode: 500,
-            message: 'Server Error',
+            message: 'Server error',
         });
     });
 });

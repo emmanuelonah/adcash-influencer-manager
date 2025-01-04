@@ -22,7 +22,7 @@ app.use(
         message: new HttpException(429, 'Request limit reach. Retry later.'),
     })
 );
-app.use(express.static(path.join(__dirname, '..', 'public')));
+app.use(express.static(path.join(__dirname, '..', 'public', 'client-build')));
 
 app.use(apiRouterV1Path, apiRouterV1);
 app.use('/*', serveClient);
