@@ -1,4 +1,5 @@
 import 'colors';
+import 'reflect-metadata';
 
 import fs from 'fs';
 import path from 'path';
@@ -10,7 +11,7 @@ import { connectDb } from './db/index.db';
 import { envVars } from './utils';
 
 async function startServer() {
-    await connectDb(async () => {
+    await connectDb(() => {
         const httpServer = https.createServer(
             {
                 key: fs.readFileSync(path.join(__dirname, '..', 'private', 'key.pem')),

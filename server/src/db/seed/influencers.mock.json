@@ -1,1 +1,86 @@
-[]
+[
+    {
+        "firstName": "Alice",
+        "lastName": "Smith",
+        "socialMediaHandles": [
+            {
+                "type": "instagram",
+                "userName": "alice_smith"
+            },
+            {
+                "type": "tiktok",
+                "userName": "alice_tiktok"
+            }
+        ],
+        "manager": {
+            "id": "m1",
+            "imgUrl": "https://example.com/images/m1.jpg",
+            "firstName": "Bob",
+            "lastName": "Johnson",
+            "email": "bob.johnson@example.com"
+        }
+    },
+    {
+        "firstName": "John",
+        "lastName": "Doe",
+        "socialMediaHandles": [
+            {
+                "type": "instagram",
+                "userName": "john_doe"
+            },
+            {
+                "type": "tiktok",
+                "userName": "john_doe_tiktok"
+            }
+        ],
+        "manager": {
+            "id": "m2",
+            "imgUrl": null,
+            "firstName": "Sarah",
+            "lastName": "Connor",
+            "email": null
+        }
+    },
+    {
+        "firstName": "Emily",
+        "lastName": "Davis",
+        "socialMediaHandles": [
+            {
+                "type": "instagram",
+                "userName": "emily_davis"
+            },
+            {
+                "type": "tiktok",
+                "userName": "emily_tiktok"
+            }
+        ],
+        "manager": {
+            "id": "m3",
+            "imgUrl": "https://example.com/images/m3.jpg",
+            "firstName": "Michael",
+            "lastName": "Smith",
+            "email": "michael.smith@example.com"
+        }
+    },
+    {
+        "firstName": "Chris",
+        "lastName": "Brown",
+        "socialMediaHandles": [
+            {
+                "type": "instagram",
+                "userName": "chris_brown"
+            },
+            {
+                "type": "tiktok",
+                "userName": "chris_brown_tiktok"
+            }
+        ],
+        "manager": {
+            "id": "m4",
+            "imgUrl": null,
+            "firstName": "Jessica",
+            "lastName": "Taylor",
+            "email": null
+        }
+    }
+]

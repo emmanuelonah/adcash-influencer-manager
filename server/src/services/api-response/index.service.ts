@@ -8,11 +8,11 @@ export interface SuccessType<DataType> {
 export interface ErrorType extends HttpException {}
 
 export class ApiResponse {
-    public error(statusCode: number, message: string) {
+    public static error(statusCode: number, message: string) {
         return new HttpException(statusCode, message);
     }
 
-    public success<D = Record<string, unknown>>(data: D) {
+    public static success<D = Record<string, unknown>>(data: D) {
         return { success: true, data };
     }
 }

@@ -25,6 +25,7 @@
         "prepare": "cd .. && husky install ./server/.husky"
     },
     "dependencies": {
+        "class-transformer": "^0.5.1",
         "class-validator": "^0.14.1",
         "cors": "^2.8.5",
         "dotenv": "^16.4.7",
@@ -33,7 +34,8 @@
         "express-rate-limit": "^7.0.0",
         "helmet": "^8.0.0",
         "mongoose": "^8.9.3",
-        "morgan": "^1.10.0"
+        "morgan": "^1.10.0",
+        "reflect-metadata": "^0.2.2"
     },
     "devDependencies": {
         "@types/cors": "^2.8.14",

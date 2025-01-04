@@ -2,12 +2,7 @@ import { Request, Response, NextFunction } from 'express';
 
 import { HttpException } from '../../services/http-exception/index.service';
 
-export function errorHandler(
-    err: HttpException,
-    _req: Request,
-    res: Response,
-    _next: NextFunction
-) {
+export function errorHandler(err: HttpException, _req: Request, res: Response, _next: NextFunction) {
     console.error(err);
     console.error(err.name);
     console.error(Object.keys(err));
