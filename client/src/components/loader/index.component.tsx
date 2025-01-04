@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
+import { VisuallyHidden } from 'components';
+
 type LoaderPropTypes = {
   isLoading: boolean;
   time?: number;
@@ -50,7 +52,7 @@ export function Loader({
 
   return (
     <>
-      {isDoneLoading && <p>Finished loading</p>}
+      {isDoneLoading && <VisuallyHidden>Finished loading</VisuallyHidden>}
 
       {showLoader && loader}
     </>
