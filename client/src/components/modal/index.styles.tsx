@@ -9,11 +9,26 @@ const Wrapper = styled.div`
   max-height: 80vh;
   height: 4.375rem;
   padding: 0.75rem 0.375rem;
+  z-index: 9999;
 
   &.bottom {
     position: fixed;
     bottom: 1rem;
     left: 1rem;
+  }
+
+  &.top {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+  }
+
+  &.center {
+    position: fixed;
+    top: 2rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
   }
 
   &.success {

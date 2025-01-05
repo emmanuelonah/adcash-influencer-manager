@@ -3,6 +3,7 @@ import React from 'react';
 import { Loader } from './loader';
 import { TableBody } from './body';
 import { TableHeader } from './header';
+import { EditorWidget } from '../editor-widget';
 import { Table as TableNode, TbodyRow, Th, Td } from './index.styles';
 
 type TableSectionProps =
@@ -26,4 +27,5 @@ export default {
   Th,
   Td,
   Loader,
+  EditorWidget,
 };

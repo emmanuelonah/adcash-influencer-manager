@@ -20,9 +20,9 @@ export class InfluencerModel {
     return HttpService.post<InfluencerRequest, InfluencerAPIResponse>('/influencers', influencer);
   }
 
-  public static updateInfluencer(influencer: Partial<InfluencerRequest>) {
+  public static updateInfluencer(influencerId: string, influencer: Partial<InfluencerRequest>) {
     return HttpService.patch<Partial<InfluencerRequest>, InfluencerAPIResponse>(
-      '/influencers',
+      `/influencers/${influencerId}`,
       influencer
     );
   }

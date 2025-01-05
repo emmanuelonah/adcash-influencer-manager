@@ -1,11 +1,9 @@
-import managers from 'models/influencer/managers.json';
-
 import { Influencer } from 'InfluencerTypes';
-import { Modal, AsyncRenderer } from 'components';
 import { composeClassNames as cx } from 'utils';
+import { Modal, AsyncRenderer, SelectManager } from 'components';
 
 import { useForm } from './useForm';
-import { StyledForm, Input, AddButton, Select, SubmitButton } from './form.styles';
+import { StyledForm, Input, AddButton, SubmitButton } from './form.styles';
 
 function classNames(value: string) {
   const size = value.length;
@@ -19,14 +17,9 @@ export function Form() {
     <StyledForm onSubmit={form.onSubmit}>
       <AsyncRenderer<Influencer> isLoading={form.isPending} error={form.error} hasData={true}>
         {(_) => (
-          <>
-            <Modal open={form.isError} type="error">
-              {form.error}
-            </Modal>
-            <Modal open={form.isSuccess} type="success">
-              Influencer created successfully
-            </Modal>
-          </>
+          <Modal open={form.isSuccess} type="success">
+            Influencer created successfully
+          </Modal>
         )}
       </AsyncRenderer>
       <Input
@@ -47,14 +40,12 @@ export function Form() {
         className={classNames(form.lastName)}
         required
       />
-      <Select name="manager" value={form.manager.id} onChange={form.onChangeManager} required>
-        <option value="">Select manager</option>
-        {managers.map((manager) => (
-          <option key={manager.id} value={manager.id}>
-            {manager.firstName} {manager.lastName}
-          </option>
-        ))}
-      </Select>
+      <SelectManager
+        name="manager"
+        value={form.manager.id}
+        onChange={form.onChangeManager}
+        required
+      />
       <AddButton type="button" onClick={form.addInstagramInput}>
         Add more instagram handle
       </AddButton>

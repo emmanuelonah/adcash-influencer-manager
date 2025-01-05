@@ -15,6 +15,7 @@ function useGetInfluencersPresenter() {
     queryKey: [GET_INFLUENCERS_QUERY_KEY, queryString],
     queryFn: () => InfluencerModel.getInfluencers(queryString),
     retry: 2,
+    refetchOnWindowFocus: false,
   });
 
   const onFilter = useCallback((event: React.FormEvent<HTMLFormElement>) => {

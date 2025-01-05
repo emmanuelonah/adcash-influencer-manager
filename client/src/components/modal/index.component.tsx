@@ -3,7 +3,7 @@ import React from 'react';
 import { Cancel } from '@styled-icons/material-outlined';
 
 import { Portal } from 'components';
-import { composeClassNames, composeClassNames as cx } from 'utils';
+import { composeClassNames } from 'utils';
 
 import { useModal } from './useModal';
 import { Wrapper, Close, Body } from './index.styles';
@@ -14,7 +14,7 @@ type ModalElement = React.ElementRef<'div'>;
 interface ModalPropTypes extends PrimitiveDivPropTypes {
   open: boolean;
   type: 'success' | 'error';
-  position?: 'top' | 'bottom';
+  position?: 'top' | 'bottom' | 'center';
   controlledState?: { isOpen: boolean; onClose(): void };
 }
 
