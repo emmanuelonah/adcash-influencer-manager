@@ -2,11 +2,17 @@ import React from 'react';
 
 import { renderWithOptions, screen } from 'utils';
 
-import { PrimaryButton, LinkButton } from './index.component';
+import { PrimaryButton, SecondaryButton, LinkButton } from './index.component';
 
 describe('<Button/>', () => {
   it('renders PrimaryButton with correct styles', () => {
     renderWithOptions(<PrimaryButton>Primary Button</PrimaryButton>);
+
+    expect(screen.getByRole('button')).toHaveTextContent('Primary Button');
+  });
+
+  it('renders SecondaryButton with correct styles', () => {
+    renderWithOptions(<SecondaryButton>Secondary Button</SecondaryButton>);
 
     expect(screen.getByRole('button')).toHaveTextContent('Primary Button');
   });

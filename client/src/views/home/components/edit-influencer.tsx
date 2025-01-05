@@ -24,7 +24,7 @@ export function EditInfluencer({ influencerId }: Readonly<EditInfluencerProps>) 
           </Modal>
         )}
       </AsyncRenderer>
-      <SelectManager name="manager" placeholder="Update manager" required />
+      <SelectManager placeholder="Update manager" required />
       <PrimaryButton type="submit">Save</PrimaryButton>
     </StyledForm>
   );

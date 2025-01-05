@@ -4,6 +4,7 @@ import { Loader } from './loader';
 import { TableBody } from './body';
 import { TableHeader } from './header';
 import { EditorWidget } from '../editor-widget';
+import { FilterWidget } from '../filter-widget/index.component';
 import { Table as TableNode, TbodyRow, Th, Td } from './index.styles';
 
 type TableSectionProps =
@@ -28,4 +29,5 @@ export default {
   Td,
   Loader,
   EditorWidget,
+  FilterWidget,
 };

@@ -22,6 +22,7 @@ function useGetInfluencersPresenter() {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
     const query = new URLSearchParams(formData as InfluencerQueryParams).toString();
+
     setQueryString(query);
   }, []);
 

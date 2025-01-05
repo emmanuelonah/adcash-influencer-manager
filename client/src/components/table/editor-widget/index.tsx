@@ -1,9 +1,9 @@
 import React from 'react';
 
 import { useBoolean } from 'hooks';
-import { Portal } from 'components';
+import { Portal, LinkButton } from 'components';
 
-import { Header, Body, Container, EditButton, CancelButton } from './index.styles';
+import { Header, Body, Container, CancelButton } from './index.styles';
 
 type EditorWidgetProp = {
   children: React.ReactNode;
@@ -14,7 +14,7 @@ export function EditorWidget({ children }: Readonly<EditorWidgetProp>) {
 
   return (
     <>
-      <EditButton onClick={toggle}>Edit</EditButton>
+      <LinkButton onClick={toggle}>Edit</LinkButton>
       {isOpen && (
         <Portal elementType="editorwidget">
           <Container>

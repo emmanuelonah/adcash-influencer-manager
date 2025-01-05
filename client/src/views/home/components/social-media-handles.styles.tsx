@@ -1,12 +1,8 @@
 import styled from 'styled-components';
 
-const ViewAccounts = styled.button`
-  border: none;
-  background-color: #102319;
-  color: #51b380;
-  padding: 0.5rem;
-  border-radius: 10px;
-  font-size: 0.7rem;
+import { SecondaryButton } from 'components/button/index.component';
+
+const ViewAccounts = styled(SecondaryButton)`
   display: flex;
   align-items: center;
   gap: 0.3rem;

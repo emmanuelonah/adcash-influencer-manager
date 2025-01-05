@@ -16,6 +16,7 @@ const sharedInputStyles = css`
 
 const Select = styled.select`
   ${sharedInputStyles}
+  margin-bottom: 0.8rem !important;
   font-size: 0.75rem !important;
 
   & option {

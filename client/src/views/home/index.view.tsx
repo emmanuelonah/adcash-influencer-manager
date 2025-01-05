@@ -11,10 +11,11 @@ import { AddInfluencer, AddInfluencerWrapper } from './index.styles';
 import { SocialMediaHandles } from './components/social-media-handles';
 
 export function Home() {
-  const { isLoading, error, data, hasData } = useGetInfluencersPresenter();
+  const { isLoading, error, data, hasData, onFilter } = useGetInfluencersPresenter();
 
   return (
     <PageWrapper>
+      <Table.FilterWidget onFilter={onFilter} />
       <AddInfluencerWrapper>
         <AddInfluencer to={ROUTES.createInfluencer}>Add influencer</AddInfluencer>
       </AddInfluencerWrapper>

@@ -1,9 +1,9 @@
 import { Influencer } from 'InfluencerTypes';
 import { composeClassNames as cx } from 'utils';
-import { Modal, AsyncRenderer, SelectManager } from 'components';
+import { Modal, AsyncRenderer, SelectManager, PrimaryButton, LinkButton } from 'components';
 
 import { useForm } from './useForm';
-import { StyledForm, Input, AddButton, SubmitButton } from './form.styles';
+import { StyledForm, Input } from './form.styles';
 
 function classNames(value: string) {
   const size = value.length;
@@ -40,15 +40,10 @@ export function Form() {
         className={classNames(form.lastName)}
         required
       />
-      <SelectManager
-        name="manager"
-        value={form.manager.id}
-        onChange={form.onChangeManager}
-        required
-      />
-      <AddButton type="button" onClick={form.addInstagramInput}>
+      <SelectManager value={form.manager.id} onChange={form.onChangeManager} required />
+      <LinkButton type="button" onClick={form.addInstagramInput}>
         Add more instagram handle
-      </AddButton>
+      </LinkButton>
       {form.instagramHandles.map(({ userName }, i) => (
         <Input
           key={`instagram-${i}`}
@@ -58,9 +53,9 @@ export function Form() {
           onChange={(ev) => form.onChangeInstagramHandle(ev, i)}
         />
       ))}
-      <AddButton type="button" onClick={form.addTiktokInput}>
+      <LinkButton type="button" onClick={form.addTiktokInput}>
         Add more tiktok handle
-      </AddButton>{' '}
+      </LinkButton>
       {form.tiktokHandles.map(({ userName }, i) => (
         <Input
           key={`tiktok-${i}`}
@@ -70,7 +65,7 @@ export function Form() {
           onChange={(ev) => form.onChangeTiktokHandle(ev, i)}
         />
       ))}
-      <SubmitButton type="submit">Submit</SubmitButton>
+      <PrimaryButton type="submit">Submit</PrimaryButton>
     </StyledForm>
   );
 }

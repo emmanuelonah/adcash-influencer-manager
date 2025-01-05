@@ -1,11 +1,6 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
-const sharedButtonStyles = css`
-  border: none;
-  background-color: transparent;
-  font-size: 0.75rem;
-  text-decoration: underline;
-`;
+import { LinkButton } from 'components/button/index.component';
 
 const Container = styled.div`
   position: fixed;
@@ -37,14 +32,8 @@ const Body = styled.div`
   height: 100%;
 `;
 
-const EditButton = styled.button`
-  ${sharedButtonStyles}
-  color: ${({ theme }) => theme.colors.primary400};
-`;
-
-const CancelButton = styled.button`
-  ${sharedButtonStyles}
+const CancelButton = styled(LinkButton)`
   color: #797979;
 `;
 
-export { Header, Body, Container, EditButton, CancelButton };
+export { Header, Body, Container, CancelButton };

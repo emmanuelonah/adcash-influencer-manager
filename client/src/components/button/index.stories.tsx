@@ -2,7 +2,7 @@ import React from 'react';
 
 import { StoryFn, Meta } from '@storybook/react';
 
-import { PrimaryButton, LinkButton } from './index.component';
+import { PrimaryButton, SecondaryButton, LinkButton } from './index.component';
 
 export default {
   title: 'Components/PrimaryButton',
@@ -11,6 +11,10 @@ export default {
 
 export const PrimaryBtn: StoryFn<typeof PrimaryButton> = () => (
   <PrimaryButton>Primary Button</PrimaryButton>
+);
+
+export const SecondaryBtn: StoryFn<typeof SecondaryButton> = () => (
+  <LinkButton>Secondary Button</LinkButton>
 );
 
 export const LinkBtn: StoryFn<typeof LinkButton> = () => <LinkButton>Link Button</LinkButton>;

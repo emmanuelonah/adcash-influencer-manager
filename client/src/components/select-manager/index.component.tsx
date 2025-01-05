@@ -13,7 +13,7 @@ interface SelectManagerProps extends PrimitiveSelectPropTypes {
 const SelectManager = React.forwardRef<SelectManagerElement, SelectManagerProps>(
   function SelectManager({ placeholder, ...restProps }, forwardedRef) {
     return (
-      <Select {...restProps} ref={forwardedRef}>
+      <Select ref={forwardedRef} name="manager" {...restProps}>
         <option value="">{placeholder ?? 'Select manager'}</option>
         {managers.map((manager) => (
           <option key={manager.id} value={manager.id}>
