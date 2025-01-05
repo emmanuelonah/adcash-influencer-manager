@@ -37,6 +37,7 @@ const TheadRow = styled.tr`
   ${stylesReset}
   display: flex;
   justify-content: space-between;
+  align-items: center;
 `;
 
 const Th = styled.th`
@@ -53,8 +54,9 @@ const TbodyRow = styled.tr`
   color: #E2E2E2;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-size: 0.8rem;
-  padding: 1.5rem 1rem;
+  padding: 1.2rem 1rem;
 
   &:hover {
     background-color: #1f1f1f;

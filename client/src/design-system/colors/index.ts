@@ -23,6 +23,6 @@ export const colors = {
   dark400: '#000',
   dark300: '#0f0f0f',
 
-  white400: '#0f0f0f',
+  white400: '#fff',
   white300: '#edeef0',
 } as const;
