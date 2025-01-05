@@ -1,6 +1,5 @@
 import mongoose, { Model } from 'mongoose';
 
-import { _idToId } from '../../plugins';
 import { InfluencerResponse } from './index.types';
 import { HttpException } from '../../services/http-exception/index.service';
 
@@ -65,8 +64,6 @@ const influencerSchema = new mongoose.Schema(
         versionKey: false,
     }
 );
-
-influencerSchema.plugin(_idToId);
 
 influencerSchema.pre<InfluencerResponse>('save', async function (next) {
     const handles = this.socialMediaHandles;
