@@ -65,6 +65,10 @@ const influencerSchema = new mongoose.Schema(
     }
 );
 
+/**
+ * This pre-save hook checks if the social media usernames are unique.
+ * It throws an error if there are duplicate usernames.
+ */
 influencerSchema.pre<InfluencerResponse>('save', async function (next) {
     const handles = this.socialMediaHandles;
     const InfluencerModel = this.constructor as Model<InfluencerResponse>;
