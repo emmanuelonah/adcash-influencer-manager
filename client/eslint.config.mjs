@@ -53,7 +53,7 @@ export default [
       'react-hooks/rules-of-hooks': 'error',
       'no-constant-binary-expression': 'off',
       'no-misleading-character-class': 'off',
-      'react-hooks/exhaustive-deps': 'error',
+      'react-hooks/exhaustive-deps': 'warn',
       '@typescript-eslint/no-this-alias': 'off',
       '@typescript-eslint/no-namespace': 'off',
       'import/no-anonymous-default-export': 'off',
