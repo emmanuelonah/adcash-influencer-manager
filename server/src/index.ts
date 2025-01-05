@@ -1,9 +1,7 @@
 import 'colors';
 import 'reflect-metadata';
 
-import fs from 'fs';
-import path from 'path';
-import https from 'https';
+import http from 'http';
 
 import app from './app';
 
@@ -12,13 +10,7 @@ import { envVars } from './utils';
 
 async function startServer() {
     await connectDb(() => {
-        const httpServer = https.createServer(
-            {
-                key: fs.readFileSync(path.join(__dirname, '..', 'private', 'key.pem')),
-                cert: fs.readFileSync(path.join(__dirname, '..', 'private', 'cert.pem')),
-            },
-            app
-        );
+        const httpServer = http.createServer(app);
 
         httpServer.listen(envVars.serverPort, () => {
             console.log(`${envVars.appName} SERVER STARTED`.blue.bold);

@@ -15,13 +15,12 @@ This is an influencers management system.
 create a file in the root folder called `.env`, paste the below content and swap it with the actual values
 
 ```bash
-ADCASH_INFLUENCER_MANAGER_APP_NAME=<string>
+ADCASH_INFLUENCER_MANAGER_APP_NAME=<string> #Optional
 ADCASH_INFLUENCER_MANAGER_SERVER_URL=<string>
 ADCASH_INFLUENCER_MANAGER_SERVER_PORT=<number>
 ADCASH_INFLUENCER_MANAGER_SERVER_MONGO_DB_URI=<string>
-ADCASH_INFLUENCER_MANAGER_CLIENT_URL=<string>
-ADCASH_INFLUENCER_MANAGER_CLIENT_PORT=<number>
-NODE_ENV=<test | development | production>
+ADCASH_INFLUENCER_MANAGER_WHITE_LISTED_DOMAINS<string> # separate them with a delimeter e.g https://domain1.com,https://domain2.com,
+NODE_ENV=<string> # e.g test | development | production
 ```
 
 ## Scripts

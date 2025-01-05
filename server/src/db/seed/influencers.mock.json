@@ -14,10 +14,10 @@
         ],
         "manager": {
             "id": "m1",
-            "imgUrl": "https://example.com/images/m1.jpg",
-            "firstName": "Bob",
-            "lastName": "Johnson",
-            "email": "bob.johnson@example.com"
+            "imgUrl": "https://i.ibb.co/TLnQt23/caricature-2.png",
+            "firstName": "Emmanuel",
+            "lastName": "Onah",
+            "email": "onah@example.com"
         }
     },
     {
@@ -56,10 +56,10 @@
         ],
         "manager": {
             "id": "m3",
-            "imgUrl": "https://example.com/images/m3.jpg",
-            "firstName": "Michael",
-            "lastName": "Smith",
-            "email": "michael.smith@example.com"
+            "imgUrl": "https://i.ibb.co/TLnQt23/caricature-2.png",
+            "firstName": "Emmanuel",
+            "lastName": "Onah",
+            "email": "onah@example.com"
         }
     },
     {

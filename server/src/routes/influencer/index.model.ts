@@ -11,10 +11,12 @@ export class InfluencerModel {
     }
 
     public static getByNameOrManager({ firstName, lastName, managerId }: InfluencerQueryParams) {
-        const query: any = {};
-        if (firstName) query.firstName = firstName;
-        if (lastName) query.lastName = lastName;
-        if (managerId) query['manager.id'] = managerId;
+        const query = {
+            ...(firstName && { firstName }),
+            ...(lastName && { lastName }),
+            ...(managerId && { 'manager.id': managerId }),
+        };
+
         return Influencer.find(query).lean().exec();
     }
 
