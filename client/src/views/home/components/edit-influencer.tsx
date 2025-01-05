@@ -20,7 +20,7 @@ export function EditInfluencer({ influencerId }: Readonly<EditInfluencerProps>) 
       >
         {(_) => (
           <Modal open={influencer.isSuccess} type="success" position="center">
-            Influencer created successfully
+            Influencer updated successfully
           </Modal>
         )}
       </AsyncRenderer>
