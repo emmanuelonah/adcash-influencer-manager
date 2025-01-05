@@ -1,3 +1,5 @@
+export * from './table';
+export * from './tooltip/index.component';
 export * from './modal/index.component';
 export * from './portal/index.component';
 export * from './loader/index.component';

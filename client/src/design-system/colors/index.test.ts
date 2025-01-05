@@ -10,6 +10,8 @@ describe('Theme', () => {
     expect(colors.success300).toBe('#d4edda');
     expect(colors.success200).toBe('#c3e6cb');
     expect(colors.dark400).toBe('#000');
+    expect(colors.dark300).toBe('#343a40');
     expect(colors.white400).toBe('#fff');
+    expect(colors.white300).toBe('#edeef0');
   });
 });

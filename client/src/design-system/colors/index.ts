@@ -21,6 +21,8 @@ export const colors = {
   success200: '#c3e6cb',
 
   dark400: '#000',
+  dark300: '#0f0f0f',
 
-  white400: '#fff',
+  white400: '#0f0f0f',
+  white300: '#edeef0',
 } as const;

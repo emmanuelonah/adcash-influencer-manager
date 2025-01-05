@@ -1,0 +1,30 @@
+[
+  {
+    "id": "1",
+    "imgUrl": "https://example.com/images/manager1.jpg",
+    "firstName": "Alice",
+    "lastName": "Smith",
+    "email": "alice.smith@example.com"
+  },
+  {
+    "id": "2",
+    "imgUrl": null,
+    "firstName": "Bob",
+    "lastName": "Johnson",
+    "email": "bob.johnson@example.com"
+  },
+  {
+    "id": "3",
+    "imgUrl": "https://example.com/images/manager3.jpg",
+    "firstName": "Charlie",
+    "lastName": "Brown",
+    "email": null
+  },
+  {
+    "id": "4",
+    "imgUrl": "https://example.com/images/manager4.jpg",
+    "firstName": "Diana",
+    "lastName": "Prince",
+    "email": "diana.prince@example.com"
+  }
+]

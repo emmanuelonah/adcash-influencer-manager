@@ -50,7 +50,8 @@ const GlobalStyles = createGlobalStyle<Theme>`
     }
 
     body {
-        background: ${({ theme }) => theme.colors.white400};
+        color:${({ theme }) => theme.colors.white300};
+        background: ${({ theme }) => theme.colors.dark300};
         line-height: 1.5;
         display: flex;
         display: -webkit-flex;

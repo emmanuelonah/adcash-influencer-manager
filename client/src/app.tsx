@@ -1,5 +1,5 @@
-import React from 'react';
+import { Routes } from 'routes';
 
 export function App() {
-  return <h1>HELLO WORLD</h1>;
+  return <Routes />;
 }

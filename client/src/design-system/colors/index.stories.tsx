@@ -42,21 +42,17 @@ export default meta;
 
 type Story = StoryObj<typeof Colors>;
 
-export const Primary400: Story = {
-  args: { color: colors.primary400, label: 'Primary400' },
-};
-export const White400: Story = { args: { color: colors.white400, label: 'White400' } };
-export const Dark400: Story = { args: { color: colors.dark400, label: 'Dark400' } };
+export const Primary400: Story = { args: { color: colors.primary400, label: 'Primary400' } };
 
-export const Success400: Story = {
-  args: { color: colors.success400, label: 'Success400' },
-};
-export const Success300: Story = {
-  args: { color: colors.success300, label: 'Success300' },
-};
-export const Success200: Story = {
-  args: { color: colors.success200, label: 'Success200' },
-};
+export const White400: Story = { args: { color: colors.white400, label: 'White400' } };
+export const White300: Story = { args: { color: colors.white300, label: 'White300' } };
+
+export const Dark400: Story = { args: { color: colors.dark400, label: 'Dark400' } };
+export const Dark300: Story = { args: { color: colors.dark300, label: 'Dark300' } };
+
+export const Success400: Story = { args: { color: colors.success400, label: 'Success400' } };
+export const Success300: Story = { args: { color: colors.success300, label: 'Success300' } };
+export const Success200: Story = { args: { color: colors.success200, label: 'Success200' } };
 
 export const Error400: Story = { args: { color: colors.error400, label: 'Error400' } };
 export const Error300: Story = { args: { color: colors.error300, label: 'Error300' } };
