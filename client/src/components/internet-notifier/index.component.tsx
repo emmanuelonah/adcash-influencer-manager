@@ -3,7 +3,6 @@
  * internet connection is lost or back online. it gives users
  * a real-time internet connection status experience.
  */
-
 import React from 'react';
 
 import { Modal } from 'components';
@@ -17,6 +16,7 @@ export function InternetNotifier() {
     <Modal
       open={open}
       type={isBackOnline ? 'success' : 'error'}
+      position="bottom"
       controlledState={{ isOpen: open, onClose: onHideNotifier }}
     >
       {message}

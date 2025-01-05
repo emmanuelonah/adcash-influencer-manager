@@ -4,12 +4,13 @@ import * as Views from 'views';
 
 const ROUTES = Object.freeze({
   home: '/',
-  addInfluencer: '/create-influencer',
+  createInfluencer: '/create-influencer',
   notFound: '*',
 });
 
 const router = createBrowserRouter([
   { path: ROUTES.home, element: <Views.Home /> },
+  { path: ROUTES.createInfluencer, element: <Views.CreateInfluencer /> },
   { path: ROUTES.notFound, element: <Views.NotFound /> },
 ]);
 

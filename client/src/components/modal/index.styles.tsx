@@ -2,17 +2,19 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div`
   margin: 0 auto;
-
   border-radius: ${(props) => props.theme.typography.borderRadius.sm};
-  position: fixed;
-  bottom: 1rem;
-  left: 1rem;
   font-size: 0.75rem;
   width: 18.75rem;
   max-width: 90%;
   max-height: 80vh;
   height: 4.375rem;
   padding: 0.75rem 0.375rem;
+
+  &.bottom {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+  }
 
   &.success {
     color: ${({ theme }) => theme.colors.success400};

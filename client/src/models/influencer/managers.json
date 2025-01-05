@@ -1,7 +1,7 @@
 [
   {
     "id": "1",
-    "imgUrl": "https://example.com/images/manager1.jpg",
+    "imgUrl": "https://i.ibb.co/r5J0rVw/10491830.jpg",
     "firstName": "Alice",
     "lastName": "Smith",
     "email": "alice.smith@example.com"
@@ -15,14 +15,14 @@
   },
   {
     "id": "3",
-    "imgUrl": "https://example.com/images/manager3.jpg",
-    "firstName": "Charlie",
-    "lastName": "Brown",
+    "imgUrl": "https://i.ibb.co/TLnQt23/caricature-2.png",
+    "firstName": "Emmanuel",
+    "lastName": "Onah",
     "email": null
   },
   {
     "id": "4",
-    "imgUrl": "https://example.com/images/manager4.jpg",
+    "imgUrl": null,
     "firstName": "Diana",
     "lastName": "Prince",
     "email": "diana.prince@example.com"

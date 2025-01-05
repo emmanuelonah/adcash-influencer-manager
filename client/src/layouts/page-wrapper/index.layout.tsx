@@ -1,8 +1,9 @@
 import React from 'react';
 
+import { ROUTES } from 'routes';
 import { designTokens } from 'design-system';
 
-import { Header, HeaderContent, Body, Footer } from './index.styles';
+import { Header, Body, Footer, LogoLink } from './index.styles';
 
 type PageWrapperProps = {
   children: React.ReactNode;
@@ -12,9 +13,9 @@ export function PageWrapper(props: Readonly<PageWrapperProps>) {
   return (
     <>
       <Header>
-        <HeaderContent>
+        <LogoLink to={ROUTES.home}>
           <designTokens.assets.IconLogo />
-        </HeaderContent>
+        </LogoLink>
       </Header>
       <Body id="main" tabIndex={-1}>
         {props.children}

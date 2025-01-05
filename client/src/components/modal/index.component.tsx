@@ -3,6 +3,7 @@ import React from 'react';
 import { Cancel } from '@styled-icons/material-outlined';
 
 import { Portal } from 'components';
+import { composeClassNames, composeClassNames as cx } from 'utils';
 
 import { useModal } from './useModal';
 import { Wrapper, Close, Body } from './index.styles';
@@ -13,11 +14,12 @@ type ModalElement = React.ElementRef<'div'>;
 interface ModalPropTypes extends PrimitiveDivPropTypes {
   open: boolean;
   type: 'success' | 'error';
+  position?: 'top' | 'bottom';
   controlledState?: { isOpen: boolean; onClose(): void };
 }
 
 export const Modal = React.forwardRef<ModalElement, ModalPropTypes>(function Modal(
-  { type, children, open, controlledState, ...restProps },
+  { type, children, open, className, controlledState, position, ...restProps },
   forwardedRef
 ) {
   const { isOpen, closeModal } = useModal(open, controlledState);
@@ -31,7 +33,7 @@ export const Modal = React.forwardRef<ModalElement, ModalPropTypes>(function Mod
         aria-modal="true"
         aria-atomic
         {...restProps}
-        className={type}
+        className={composeClassNames(type, position, className)}
         ref={forwardedRef}
       >
         <Body>

@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import styled, { css } from 'styled-components';
 
 const SharedStyles = css`
@@ -14,8 +15,10 @@ const Header = styled.header`
   align-items: center;
 `;
 
-const HeaderContent = styled.div`
+const LogoLink = styled(NavLink)`
   ${SharedStyles}
+  display:inline-block;
+  text-decoration: none;
 `;
 
 const Body = styled.main`
@@ -41,4 +44,4 @@ const Logo = styled.img`
   height: 50px;
 `;
 
-export { Header, HeaderContent, Body, Footer, Logo };
+export { Header, LogoLink, Body, Footer, Logo };

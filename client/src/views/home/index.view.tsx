@@ -15,7 +15,7 @@ export function Home() {
   return (
     <PageWrapper>
       <AddInfluencerWrapper>
-        <AddInfluencer to={ROUTES.addInfluencer}>Add influencer</AddInfluencer>
+        <AddInfluencer to={ROUTES.createInfluencer}>Add influencer</AddInfluencer>
       </AddInfluencerWrapper>
       <AsyncRenderer<InfluencerResponse[]>
         isLoading={isLoading}

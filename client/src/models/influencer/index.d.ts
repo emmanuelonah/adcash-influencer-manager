@@ -7,10 +7,9 @@ declare module 'InfluencerTypes' {
 
   export type SocialMediaType = 'instagram' | 'tiktok';
 
-  export type SocialMediaHandle = {
-    type: 'instagram' | 'tiktok';
-    userName: string;
-  };
+  type Tiktok = { type: 'tiktok'; userName: string };
+  type Instagram = { type: 'instagram'; userName: string };
+  export type SocialMediaHandle = Tiktok | Instagram;
 
   export type Manager = {
     id: string;
