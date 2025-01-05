@@ -14,7 +14,7 @@ describe('<Button/>', () => {
   it('renders SecondaryButton with correct styles', () => {
     renderWithOptions(<SecondaryButton>Secondary Button</SecondaryButton>);
 
-    expect(screen.getByRole('button')).toHaveTextContent('Primary Button');
+    expect(screen.getByRole('button')).toHaveTextContent('Secondary Button');
   });
 
   it('renders LinkButton with correct styles', () => {
