@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Influencers management system",
   "author": "emmanuelonah",
+  "proxy": "http://localhost:8080",
   "license": "MIT",
   "engines": {
     "node": ">=10"
