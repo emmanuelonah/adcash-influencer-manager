@@ -21,7 +21,6 @@ const Header = styled.div`
   width: 100%;
 
   & h1 {
-    transform: translateY(-50%);
     text-align: center;
     font-weight: ${(props) => props.theme.typography.title3.fontWeight};
     font-size: ${(props) => props.theme.typography.title3.fontSize};

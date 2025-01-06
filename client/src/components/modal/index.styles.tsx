@@ -7,9 +7,10 @@ const Wrapper = styled.div`
   width: 18.75rem;
   max-width: 90%;
   max-height: 80vh;
-  height: 4.375rem;
+  height: 60px;
   padding: 0.75rem 0.375rem;
   z-index: 9999;
+  border: solid 1px;
 
   &.bottom {
     position: fixed;
@@ -32,15 +33,15 @@ const Wrapper = styled.div`
   }
 
   &.success {
-    color: ${({ theme }) => theme.colors.success400};
-    background-color: ${({ theme }) => theme.colors.success300};
-    border-color: ${({ theme }) => theme.colors.success200};
+    color: #75b798;
+    background-color: #051b11;
+    border-color: #0f5132;
   }
 
   &.error {
-    color: ${({ theme }) => theme.colors.error400};
-    background-color: ${({ theme }) => theme.colors.error300};
-    border-color: ${({ theme }) => theme.colors.error200};
+    color: #ea868f;
+    background-color: #2c0b0e;
+    border-color: #842029;
   }
 `;
 

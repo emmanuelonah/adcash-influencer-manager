@@ -6,7 +6,7 @@ import { StoryFn, Meta } from '@storybook/react';
 import { FilterWidget } from '.';
 
 export default {
-  title: 'Components/SelectManager',
+  title: 'Components/FilterWidget',
   component: FilterWidget,
 } as Meta<typeof FilterWidget>;
 
