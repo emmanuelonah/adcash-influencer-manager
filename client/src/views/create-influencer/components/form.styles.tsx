@@ -19,6 +19,10 @@ const StyledForm = styled.form`
 const Input = styled.input`
   ${sharedInputStyles}
 
+  &:first-child {
+    margin-top: 3rem;
+  }
+
   &.invalid {
     border: 0.0625rem solid ${({ theme }) => theme.colors.error100};
   }

@@ -3,7 +3,7 @@ import React from 'react';
 import { useBoolean } from 'hooks';
 import { Portal, LinkButton, Heading1 } from 'components';
 
-import { Header, Body, Container, CancelButton } from './index.styles';
+import { Header, Body, Container, CancelButton, ChildrenWrapper } from './index.styles';
 
 type EditorWidgetProp = {
   title?: string;
@@ -21,9 +21,11 @@ export function EditorWidget({ title, children }: Readonly<EditorWidgetProp>) {
           <Container>
             <Header>
               <CancelButton onClick={toggle}>Cancel</CancelButton>
-              {title && <Heading1>{title}</Heading1>}
             </Header>
-            <Body>{children}</Body>
+            <Body>
+              {title && <Heading1>{title}</Heading1>}
+              <ChildrenWrapper>{children}</ChildrenWrapper>
+            </Body>
           </Container>
         </Portal>
       )}

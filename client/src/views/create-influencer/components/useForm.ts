@@ -5,27 +5,11 @@ import managers from 'models/influencer/managers.json';
 import { useCreatePresenter } from 'models';
 import { Manager, Tiktok, Instagram, InfluencerRequest } from 'InfluencerTypes';
 
-const DEFAULT_MANAGER: Manager = {
-  id: '',
-  imgUrl: '',
-  firstName: '',
-  lastName: '',
-  email: '',
-};
+import { useValidation } from './useValidation';
 
-const DEFAULT_TIKTOK: Tiktok[] = [
-  {
-    type: 'tiktok',
-    userName: '',
-  },
-];
-
-const DEFAULT_INSTAGRAM: Instagram[] = [
-  {
-    type: 'instagram',
-    userName: '',
-  },
-];
+const DEFAULT_MANAGER: Manager = { id: '', imgUrl: '', firstName: '', lastName: '', email: '' };
+const DEFAULT_TIKTOK: Tiktok[] = [{ type: 'tiktok', userName: '' }];
+const DEFAULT_INSTAGRAM: Instagram[] = [{ type: 'instagram', userName: '' }];
 
 export function useForm() {
   const [firstName, setFirstName] = useState<string>('');
@@ -33,8 +17,16 @@ export function useForm() {
   const [manager, setManager] = useState<Manager>(DEFAULT_MANAGER);
   const [tiktokHandles, setTiktokHandles] = useState<Tiktok[]>(DEFAULT_TIKTOK);
   const [instagramHandles, setInstagramHandles] = useState<Instagram[]>(DEFAULT_INSTAGRAM);
-
   const { isPending, isSuccess, isError, error, mutate } = useCreatePresenter();
+
+  const {
+    isSubmitDisabled,
+    nameValidationClassName,
+    instagramValidationClassName,
+    tiktokValidationClassName,
+    validateInstagramInput,
+    validateTiktokInput,
+  } = useValidation({ tiktokHandles, instagramHandles });
 
   const onChangeFirstName = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
     setFirstName(event.target.value);
@@ -46,6 +38,7 @@ export function useForm() {
 
   const onChangeManager = useCallback((event: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedManager = managers.find((manager) => manager.id === event.target.value);
+
     if (selectedManager) setManager(selectedManager);
   }, []);
 
@@ -63,10 +56,13 @@ export function useForm() {
         const newHandles = [...prev];
         newHandles[index].type = 'tiktok';
         newHandles[index].userName = event.target.value;
+
+        validateTiktokInput(index, newHandles[index]);
+
         return newHandles;
       });
     },
-    []
+    [validateTiktokInput]
   );
 
   const onChangeInstagramHandle = useCallback(
@@ -75,10 +71,13 @@ export function useForm() {
         const newHandles = [...prev];
         newHandles[index].type = 'instagram';
         newHandles[index].userName = event.target.value;
+
+        validateInstagramInput(index, newHandles[index]);
+
         return newHandles;
       });
     },
-    []
+    [validateInstagramInput]
   );
 
   const onSubmit = useCallback(
@@ -116,5 +115,9 @@ export function useForm() {
     isSuccess,
     isError,
     error,
+    isSubmitDisabled,
+    nameValidationClassName,
+    instagramValidationClassName,
+    tiktokValidationClassName,
   };
 }

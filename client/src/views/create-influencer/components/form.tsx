@@ -1,14 +1,8 @@
 import { Influencer } from 'InfluencerTypes';
-import { composeClassNames as cx } from 'utils';
 import { Modal, AsyncRenderer, SelectManager, SecondaryButton, LinkButton } from 'components';
 
 import { useForm } from './useForm';
 import { StyledForm, Input } from './form.styles';
-
-function classNames(value: string) {
-  const size = value.length;
-  return cx(size > 50 && 'invalid', size > 0 && size < 51 && 'valid');
-}
 
 export function Form() {
   const form = useForm();
@@ -28,7 +22,7 @@ export function Form() {
         maxLength={50}
         value={form.firstName}
         onChange={form.onChangeFirstName}
-        className={classNames(form.firstName)}
+        className={form.nameValidationClassName(form.firstName)}
         required
       />
       <Input
@@ -37,7 +31,7 @@ export function Form() {
         maxLength={50}
         value={form.lastName}
         onChange={form.onChangeLastName}
-        className={classNames(form.lastName)}
+        className={form.nameValidationClassName(form.lastName)}
         required
       />
       <SelectManager value={form.manager.id} onChange={form.onChangeManager} required />
@@ -51,6 +45,7 @@ export function Form() {
           placeholder="Instagram username"
           value={userName}
           onChange={(ev) => form.onChangeInstagramHandle(ev, i)}
+          className={form.instagramValidationClassName(i)}
           required
         />
       ))}
@@ -64,10 +59,13 @@ export function Form() {
           placeholder="Tiktok username"
           value={userName}
           onChange={(ev) => form.onChangeTiktokHandle(ev, i)}
+          className={form.tiktokValidationClassName(i)}
           required
         />
       ))}
-      <SecondaryButton type="submit">Submit</SecondaryButton>
+      <SecondaryButton type="submit" disabled={form.isSubmitDisabled}>
+        Submit
+      </SecondaryButton>
     </StyledForm>
   );
 }

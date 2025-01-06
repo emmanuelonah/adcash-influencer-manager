@@ -1,10 +1,11 @@
 {
   "compilerOptions": {
     "baseUrl": "./src",
-    "target": "es5",
+    "target": "es2015",
     "allowJs": true,
     "strict": true,
     "noEmit": true,
+    "downlevelIteration": true,
     "module": "esnext",
     "jsx": "react-jsx",
     "skipLibCheck": true,

@@ -19,26 +19,31 @@ const Header = styled.div`
   height: 5rem;
   border-bottom: solid 0.0625rem ${({ theme }) => theme.colors.dark50};
   width: 100%;
-
-  & h1 {
-    text-align: center;
-    font-weight: ${({ theme }) => theme.typography.title3.fontWeight};
-    font-size: ${({ theme }) => theme.typography.title3.fontSize};
-  }
 `;
 
 const Body = styled.div`
   width: 100%;
   max-width: ${({ theme }) => theme.typography.pageWidth.desktopEndWidth};
   margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100%;
+
+  & h1 {
+    text-align: center;
+    font-weight: ${({ theme }) => theme.typography.title3.fontWeight};
+    font-size: ${({ theme }) => theme.typography.title3.fontSize};
+    padding-top: 1rem;
+  }
 `;
 
 const CancelButton = styled(LinkButton)`
   color: ${({ theme }) => theme.colors.ash400};
 `;
 
-export { Header, Body, Container, CancelButton };
+const ChildrenWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+`;
+
+export { Header, Body, Container, CancelButton, ChildrenWrapper };

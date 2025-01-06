@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { render, screen, fireEvent } from 'utils';
+import { renderWithOptions, screen, fireEvent } from 'utils';
 
 import { Tooltip } from './index.component';
 
 describe('<Tooltip/>', () => {
   it('renders children when open is true', () => {
-    render(
+    renderWithOptions(
       <Tooltip open onClose={jest.fn()}>
         <div>Tooltip Content</div>
       </Tooltip>
@@ -16,7 +16,7 @@ describe('<Tooltip/>', () => {
   });
 
   it('does not render children when open is false', () => {
-    render(
+    renderWithOptions(
       <Tooltip open={false} onClose={jest.fn()}>
         <div>Tooltip Content</div>
       </Tooltip>
@@ -27,7 +27,7 @@ describe('<Tooltip/>', () => {
 
   it('calls onClose when clicking outside the tooltip', () => {
     const onClose = jest.fn();
-    render(
+    renderWithOptions(
       <div>
         <Tooltip open onClose={onClose}>
           <div>Tooltip Content</div>
@@ -42,7 +42,7 @@ describe('<Tooltip/>', () => {
 
   it('does not call onClose when clicking inside the tooltip', () => {
     const onClose = jest.fn();
-    render(
+    renderWithOptions(
       <Tooltip open onClose={onClose}>
         <div>Tooltip Content</div>
       </Tooltip>
@@ -56,7 +56,7 @@ describe('<Tooltip/>', () => {
     const onClose = jest.fn();
     const excludedRef = React.createRef<HTMLDivElement>();
 
-    render(
+    renderWithOptions(
       <div>
         <Tooltip open onClose={onClose} excludedRefs={[excludedRef]}>
           <div>Tooltip Content</div>
