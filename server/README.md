@@ -93,6 +93,10 @@ We use the MVC pattern:
 - __Jest__: For unit test.
 - __Supertest__: For api test.
 
+### Documentation Tool
+
+- __Postman__: [For Api documentation.](https://documenter.getpostman.com/view/7240396/2sAYJ9BJpz#d95807cc-bb9a-41ad-ae05-9be7ebd86ee7)
+
 # Tools used
 
 1. [NodeJs](https://nodejs.org/en)
@@ -104,4 +108,4 @@ We use the MVC pattern:
 ## Environments
 
 - [Local](https://localhost:8080/)
-- [Staging](https://)
+- [Production](https://adcash-influencer-manager-api.netlify.app/api/v1/)

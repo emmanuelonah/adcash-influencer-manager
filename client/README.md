@@ -147,4 +147,4 @@ We use the MVP pattern:
 ## Environments
 
 - [Local](http://localhost:3000/)
-- [Staging](https://aim.netlify.app)
+- [Production](https://adcash-influencer-manager.netlify.app/)
