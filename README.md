@@ -39,5 +39,6 @@ yarn run dev # up the server
 <img src="./client/src/design-system/assets/icn-demo-create.png" alt="Create influencer page">
 <img src="./client/src/design-system/assets/icn-demo-update.png" alt="Update influencer page">
 
-[App](https://adcash-influencer-manager.netlify.app/)
-[API documentation](https://documenter.getpostman.com/view/7240396/2sAYJ9BJpz#d95807cc-bb9a-41ad-ae05-9be7ebd86ee7)
+[App 👨‍🎨](https://adcash-influencer-manager.netlify.app/)
+
+[API documentation 🤖](https://documenter.getpostman.com/view/7240396/2sAYJ9BJpz#d95807cc-bb9a-41ad-ae05-9be7ebd86ee7)
