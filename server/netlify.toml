@@ -6,7 +6,6 @@ publish = "build"
 [functions]
 external_node_modules = ["express", "mongoose"]
 node_bundler = "esbuild"
-timeout = 60
 
 [[redirects]]
 force = true
