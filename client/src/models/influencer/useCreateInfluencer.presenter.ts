@@ -15,7 +15,7 @@ function useCreatePresenter() {
     mutationKey: [CREATE_MENU_QUERY_KEY],
     mutationFn: InfluencerModel.createInfluencer,
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: [GET_INFLUENCERS_QUERY_KEY] });
+      queryClient.invalidateQueries({ queryKey: [GET_INFLUENCERS_QUERY_KEY], exact: false });
     },
     retry: false,
   });

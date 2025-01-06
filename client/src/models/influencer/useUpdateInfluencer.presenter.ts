@@ -17,7 +17,7 @@ function useUpdatePresenter() {
       return InfluencerModel.updateInfluencer(influencerId, { manager });
     },
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: [GET_INFLUENCERS_QUERY_KEY] });
+      queryClient.invalidateQueries({ queryKey: [GET_INFLUENCERS_QUERY_KEY], exact: false });
     },
     retry: false,
   });
