@@ -32,19 +32,4 @@ const Wrapper = styled.div`
   }
 `;
 
-const Refresh = styled.button`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.625rem;
-
-  & span {
-    padding-left: 0.5rem;
-  }
-
-  & img {
-    width: 1.5625rem;
-  }
-`;
-
-export { Wrapper, Refresh };
+export { Wrapper };

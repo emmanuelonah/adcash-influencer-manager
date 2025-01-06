@@ -5,20 +5,20 @@ import { StoryFn, Meta } from '@storybook/react';
 import { PrimaryButton, SecondaryButton, DangerButton, LinkButton } from './index.component';
 
 export default {
-  title: 'Components/PrimaryButton',
+  title: 'Components/Button',
   component: PrimaryButton,
 } as Meta<typeof PrimaryButton>;
 
-export const PrimaryBtn: StoryFn<typeof PrimaryButton> = () => (
+export const Primary: StoryFn<typeof PrimaryButton> = () => (
   <PrimaryButton>Primary Button</PrimaryButton>
 );
 
-export const SecondaryBtn: StoryFn<typeof SecondaryButton> = () => (
+export const Secondary: StoryFn<typeof SecondaryButton> = () => (
   <SecondaryButton>Secondary Button</SecondaryButton>
 );
 
-export const DangerBtn: StoryFn<typeof DangerButton> = () => (
+export const Danger: StoryFn<typeof DangerButton> = () => (
   <DangerButton>Danger Button</DangerButton>
 );
 
-export const LinkBtn: StoryFn<typeof LinkButton> = () => <LinkButton>Link Button</LinkButton>;
+export const Link: StoryFn<typeof LinkButton> = () => <LinkButton>Link Button</LinkButton>;

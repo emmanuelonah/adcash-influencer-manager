@@ -13,13 +13,13 @@ const SkipToMainContent = styled.a`
   background-color: ${(props) => props.theme.colors.warning400};
   border: solid 0.0625rem ${(props) => props.theme.colors.dark400};
   color: ${(props) => props.theme.colors.white400};
-  border-radius: ${(props) => props.theme.typography.borderRadius.md};
+  border-radius: ${(props) => props.theme.typography.borderRadius.sm};
   font-size: ${(props) => props.theme.typography.bodyText.fontSize};
   padding: 0.5rem;
   position: absolute;
   left: 0;
   top: -300px;
-  z-index: 100;
+  z-index: ${(props) => props.theme.typography.zIndexes.step1};
   transition: top 0.5s ease-out;
   outline: none;
 
@@ -109,7 +109,7 @@ const GlobalStyles = createGlobalStyle<Theme>`
     input[type='week'],
     select:focus,
     textarea {
-        font-size: 1rem;
+        font-size: ${({ theme }) => theme.typography.bodyText.fontSize};
     }
 `;
 

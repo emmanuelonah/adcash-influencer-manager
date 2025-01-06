@@ -4,13 +4,13 @@ import { sharedInputStyles } from 'components/select-manager/index.styles';
 
 const StyledForm = styled.form`
   width: 100%;
-  max-width: 800px;
+  max-width: 50rem;
   display: flex;
   column-gap: 1rem;
   flex-wrap: wrap;
-  background-color: #171717;
-  border: solid 1px #1d1d1d;
-  border-radius: 5px;
+  background-color: ${({ theme }) => theme.colors.dark40};
+  border: solid 0.0625rem ${({ theme }) => theme.colors.dark50};
+  border-radius: ${({ theme }) => theme.typography.borderRadius.sm};
   padding: 0.5rem 1rem;
   margin-top: 3rem;
 

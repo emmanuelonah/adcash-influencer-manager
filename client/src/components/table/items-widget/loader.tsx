@@ -12,14 +12,14 @@ const shimmer = keyframes`
 `;
 
 const SkeletonLoader = styled.div`
-  background-color: #171717;
-  border-radius: 5px;
+  background-color: ${({ theme }) => theme.colors.dark40};
+  border-radius: ${({ theme }) => theme.typography.borderRadius.sm};
   width: 100%;
   min-height: calc(100vh - 200px);
   max-width: 1420px;
   margin: 0 auto;
   padding: 0.5rem 1rem;
-  border: solid 1px #1d1d1d;
+  border: solid 0.0625rem ${({ theme }) => theme.colors.dark50};
   overflow: hidden;
   position: relative;
 
@@ -41,12 +41,12 @@ const SkeletonLoader = styled.div`
 `;
 
 const Header = styled.div`
-  background-color: #1f1f1f;
-  border: solid 1px #252525;
-  border-radius: 5px;
-  color: #797979;
+  background-color: ${({ theme }) => theme.colors.dark200};
+  border: solid 0.0625rem #252525;
+  border-radius: ${({ theme }) => theme.typography.borderRadius.sm};
+  color: ${({ theme }) => theme.colors.ash400};
   text-align: left;
-  font-size: 0.75rem;
+  font-size: ${({ theme }) => theme.typography.preText.fontSize};
   padding: 1rem 1rem;
   margin-bottom: 2rem;
   display: flex;
@@ -54,8 +54,8 @@ const Header = styled.div`
 `;
 
 const Row = styled.div`
-  background-color: #1f1f1f;
-  border-radius: 5px;
+  background-color: ${({ theme }) => theme.colors.dark200};
+  border-radius: ${({ theme }) => theme.typography.borderRadius.sm};
   display: flex;
   justify-content: space-between;
   margin-bottom: 1rem;
@@ -65,8 +65,8 @@ const Row = styled.div`
 const SkeletonCell = styled.div`
   height: 20px;
   width: calc(16.666% - 10px);
-  background-color: #2a2a2a;
-  border-radius: 6px;
+  background-color: ${({ theme }) => theme.colors.error200};
+  border-radius: ${({ theme }) => theme.typography.borderRadius.sm};
 `;
 
 export function Loader() {

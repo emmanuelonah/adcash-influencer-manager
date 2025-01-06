@@ -20,11 +20,11 @@ const Input = styled.input`
   ${sharedInputStyles}
 
   &.invalid {
-    border: 1px solid red;
+    border: 0.0625rem solid ${({ theme }) => theme.colors.error100};
   }
 
   &.valid {
-    border: 1px solid green;
+    border: 0.0625rem solid ${({ theme }) => theme.colors.success600};
   }
 `;
 

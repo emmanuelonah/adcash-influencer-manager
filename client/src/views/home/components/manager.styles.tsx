@@ -7,11 +7,11 @@ const ManagerWrapper = styled.div`
 `;
 
 const Img = styled.img`
-  width: 25px;
-  height: 25px;
+  width: 1.5625rem;
+  height: 1.5625rem;
   border-radius: 50%;
   object-fit: cover;
-  border: solid 1px #1d1d1d;
+  border: solid 0.0625rem ${({ theme }) => theme.colors.dark50};
 `;
 
 export { ManagerWrapper, Img };

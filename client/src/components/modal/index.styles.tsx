@@ -2,15 +2,15 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div`
   margin: 0 auto;
-  border-radius: ${(props) => props.theme.typography.borderRadius.sm};
-  font-size: 0.75rem;
+  border-radius: ${({ theme }) => theme.typography.borderRadius.sm};
+  font-size: ${({ theme }) => theme.typography.preText.fontSize};
   width: 18.75rem;
   max-width: 90%;
   max-height: 80vh;
-  height: 60px;
+  height: 3.75rem;
   padding: 0.75rem 0.375rem;
-  z-index: 9999;
-  border: solid 1px;
+  z-index: ${({ theme }) => theme.typography.zIndexes.max};
+  border: solid 0.0625rem;
 
   &.bottom {
     position: fixed;
@@ -33,15 +33,15 @@ const Wrapper = styled.div`
   }
 
   &.success {
-    color: #75b798;
-    background-color: #051b11;
-    border-color: #0f5132;
+    color: ${({ theme }) => theme.colors.success100};
+    background-color: ${({ theme }) => theme.colors.success500};
+    border-color: ${({ theme }) => theme.colors.success600};
   }
 
   &.error {
-    color: #ea868f;
-    background-color: #2c0b0e;
-    border-color: #842029;
+    color: ${({ theme }) => theme.colors.error50};
+    background-color: ${({ theme }) => theme.colors.error500};
+    border-color: ${({ theme }) => theme.colors.error100};
   }
 `;
 

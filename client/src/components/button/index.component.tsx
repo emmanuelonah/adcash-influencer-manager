@@ -2,8 +2,8 @@ import styled, { css } from 'styled-components';
 
 const sharedButtonStyles = css`
   border: none;
-  border-radius: 5px;
-  font-size: 0.75rem;
+  border-radius: ${({ theme }) => theme.typography.borderRadius.sm};
+  font-size: ${({ theme }) => theme.typography.preText.fontSize};
   padding: 0.5rem;
   min-width: 100px;
   height: 36px;
@@ -11,32 +11,32 @@ const sharedButtonStyles = css`
 
 const PrimaryButton = styled.button`
   ${sharedButtonStyles}
-  background-color: #1f1f1f;
-  color: #797979;
+  background-color: ${({ theme }) => theme.colors.dark200};
+  color: ${({ theme }) => theme.colors.ash400};
 
   &:hover {
-    background-color: #2f2f2f;
+    background-color: ${({ theme }) => theme.colors.dark100};
   }
 `;
 
 const SecondaryButton = styled.button`
   ${sharedButtonStyles}
-  background-color: #102319;
-  color: #51b380;
+  background-color: ${({ theme }) => theme.colors.success400};
+  color: ${({ theme }) => theme.colors.success200};
 
   &:hover {
-    background-color: #1a2f1e;
+    background-color: ${({ theme }) => theme.colors.success300};
     transition: background-color 0.5s ease;
   }
 `;
 
 const DangerButton = styled.button`
   ${sharedButtonStyles}
-  color: #fff;
-  background-color: #c82333;
+  color: ${({ theme }) => theme.colors.white400};
+  background-color: ${({ theme }) => theme.colors.error400};
 
   &:hover {
-    background-color: #d32f3f;
+    background-color: ${({ theme }) => theme.colors.error300};
     transition: background-color 0.5s ease;
   }
 `;
@@ -44,7 +44,7 @@ const DangerButton = styled.button`
 const LinkButton = styled.button`
   border: none;
   background-color: transparent;
-  font-size: 0.75rem;
+  font-size: ${({ theme }) => theme.typography.preText.fontSize};
   color: ${({ theme }) => theme.colors.primary400};
   text-decoration: underline;
 `;

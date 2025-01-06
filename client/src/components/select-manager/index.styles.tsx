@@ -2,26 +2,26 @@ import styled, { css } from 'styled-components';
 
 const sharedInputStyles = css`
   border: none;
-  background-color: #1f1f1f;
-  border-radius: 5px;
-  color: #797979;
+  background-color: ${({ theme }) => theme.colors.dark200};
+  border-radius: ${({ theme }) => theme.typography.borderRadius.sm};
+  color: ${({ theme }) => theme.colors.ash400};
   text-align: left;
-  font-size: 0.75rem;
-  padding: 1rem 1rem;
+  font-size: ${({ theme }) => theme.typography.preText.fontSize};
+  padding: 1rem;
   margin-bottom: 0.8rem;
   width: 100%;
-  max-width: 300px;
-  height: 36px;
+  max-width: 18.75rem;
+  height: 2.25rem;
 `;
 
 const Select = styled.select`
   ${sharedInputStyles}
   margin-bottom: 0.8rem !important;
-  font-size: 0.75rem !important;
+  font-size: ${({ theme }) => theme.typography.preText.fontSize} !important;
   padding: 0.5rem;
 
   & option {
-    font-size: 0.75rem;
+    font-size: ${({ theme }) => theme.typography.preText.fontSize};
   }
 `;
 

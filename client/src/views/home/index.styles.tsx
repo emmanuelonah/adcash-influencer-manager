@@ -9,11 +9,11 @@ const AddInfluencerWrapper = styled.div`
 
 const AddInfluencer = styled(Link)`
   text-decoration: none;
-  background-color: #102319;
-  color: #51b380;
+  background-color: ${({ theme }) => theme.colors.success400};
+  color: ${({ theme }) => theme.colors.success200};
   padding: 0.5rem 0.8rem;
-  border-radius: 5px;
-  font-size: 0.7rem;
+  border-radius: ${({ theme }) => theme.typography.borderRadius.sm};
+  font-size: ${({ theme }) => theme.typography.preText.fontSize};
   margin: 1rem 0;
 `;
 

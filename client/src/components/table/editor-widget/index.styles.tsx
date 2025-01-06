@@ -9,27 +9,27 @@ const Container = styled.div`
   right: 0;
   bottom: 0;
   margin: 0 auto;
-  background-color: rgba(0, 0, 0, 0.95);
-  z-index: 8888;
+  background-color: ${({ theme }) => theme.colors.dark500};
+  z-index: ${(props) => props.theme.typography.zIndexes.modal};
   padding: 1rem;
 `;
 
 const Header = styled.div`
   padding: 1rem;
   height: 5rem;
-  border-bottom: solid 1px #1d1d1d;
+  border-bottom: solid 0.0625rem ${({ theme }) => theme.colors.dark50};
   width: 100%;
 
   & h1 {
     text-align: center;
-    font-weight: ${(props) => props.theme.typography.title3.fontWeight};
-    font-size: ${(props) => props.theme.typography.title3.fontSize};
+    font-weight: ${({ theme }) => theme.typography.title3.fontWeight};
+    font-size: ${({ theme }) => theme.typography.title3.fontSize};
   }
 `;
 
 const Body = styled.div`
   width: 100%;
-  max-width: 1420px;
+  max-width: ${({ theme }) => theme.typography.pageWidth.desktopEndWidth};
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -38,7 +38,7 @@ const Body = styled.div`
 `;
 
 const CancelButton = styled(LinkButton)`
-  color: #797979;
+  color: ${({ theme }) => theme.colors.ash400};
 `;
 
 export { Header, Body, Container, CancelButton };

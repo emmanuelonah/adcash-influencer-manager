@@ -3,14 +3,14 @@ import styled, { css } from 'styled-components';
 
 const SharedStyles = css`
   width: 100%;
-  max-width: 1420px;
+  max-width: ${({ theme }) => theme.typography.pageWidth.desktopEndWidth};
   margin: 0 auto;
 `;
 
 const Header = styled.header`
   padding: 1rem 2rem;
   height: 5rem;
-  border-bottom: solid 1px #1d1d1d;
+  border-bottom: solid 0.0625rem ${({ theme }) => theme.colors.dark50};
   display: flex;
   align-items: center;
 `;
@@ -28,8 +28,8 @@ const Body = styled.main`
 
 const Footer = styled.footer`
   ${SharedStyles}
-  color: #797979;
-  font-size: 0.75rem;
+  color: ${({ theme }) => theme.colors.ash400};
+  font-size: ${({ theme }) => theme.typography.preText.fontSize};
   font-weight: lighter;
   text-align: center;
   position: fixed;
@@ -41,7 +41,7 @@ const Footer = styled.footer`
 `;
 
 const Logo = styled.img`
-  height: 50px;
+  height: 3.125rem;
 `;
 
 export { Header, LogoLink, Body, Footer, Logo };

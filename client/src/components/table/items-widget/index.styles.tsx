@@ -12,34 +12,34 @@ const Table = styled.table`
   ${stylesReset}
   border-collapse: collapse;
   border-spacing: 0;
-  background-color: #171717;
-  border-radius: 5px;
+  background-color: ${({ theme }) => theme.colors.dark40};
+  border-radius: ${({ theme }) => theme.typography.borderRadius.sm};
   border-collapse: separate;
   border-spacing: 0;
   width: 100%;
-  height: calc(100vh - 400px);
+  height: calc(100vh - 25rem);
   margin: 0 auto;
   padding: 0.5rem;
-  border: solid 1px #1d1d1d;
+  border: solid 0.0625rem ${({ theme }) => theme.colors.dark50};
 `;
 
 const Thead = styled.thead`
   ${stylesReset}
-  color: #797979;
+  color: ${({ theme }) => theme.colors.ash400};
   text-align: left;
-  font-size: 0.75rem;
+  font-size: ${({ theme }) => theme.typography.preText.fontSize};
   margin-bottom: 2rem;
 `;
 
 const TheadRow = styled.tr`
   ${stylesReset}
-  height: 24px;
+  height: 1.5rem;
 `;
 
 const Th = styled.th`
   ${stylesReset}
   font-weight: lighter;
-  padding: 8px;
+  padding: 0.5rem;
   text-align: left;
 `;
 
@@ -50,18 +50,18 @@ const Tbody = styled.tbody`
 const TbodyRow = styled.tr`
   ${stylesReset}
   color: #E2E2E2;
-  font-size: 0.8rem;
-  height: 24px;
+  font-size: ${({ theme }) => theme.typography.smallText.fontSize};
+  height: 1.5rem;
 
   &:hover {
-    background-color: #1f1f1f;
-    border-radius: 5px;
+    background-color: ${({ theme }) => theme.colors.dark200};
+    border-radius: ${({ theme }) => theme.typography.borderRadius.sm};
   }
 `;
 
 const Td = styled.td`
   ${stylesReset}
-  padding: 8px;
+  padding: 0.5rem;
   font-weight: lighter;
   text-align: left;
 `;

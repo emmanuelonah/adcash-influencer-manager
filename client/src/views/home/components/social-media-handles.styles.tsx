@@ -14,8 +14,8 @@ const ListItem = styled.li`
   margin-bottom: 0.3rem;
 
   &:hover {
-    background-color: #1f1f1f;
-    border-radius: 5px;
+    background-color: ${({ theme }) => theme.colors.dark200};
+    border-radius: ${({ theme }) => theme.typography.borderRadius.sm};
   }
 `;
 
