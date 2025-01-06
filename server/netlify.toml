@@ -6,9 +6,11 @@ publish = "build"
 [functions]
 external_node_modules = ["express", "mongoose"]
 node_bundler = "esbuild"
+timeout = 60
 
 [[redirects]]
 force = true
 from = "/api/v1/*"
 status = 200
 to = "/.netlify/functions/api/v1/:splat"
+headers = { "Access-Control-Allow-Origin" = "*", "Access-Control-Allow-Methods" = "GET, POST, PUT, DELETE, OPTIONS", "Access-Control-Allow-Headers" = "Content-Type, Authorization" }
