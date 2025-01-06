@@ -1,6 +1,12 @@
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
+  & h1 {
+    font-weight: ${(props) => props.theme.typography.title2.fontWeight};
+    font-size: ${(props) => props.theme.typography.title2.fontSize};
+    line-height: ${(props) => props.theme.typography.lineHeight.xxs};
+  }
+
   /**
    * @mobileStyle
    */

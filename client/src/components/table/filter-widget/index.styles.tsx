@@ -10,18 +10,14 @@ const StyledForm = styled.form`
   flex-wrap: wrap;
   background-color: #171717;
   border: solid 1px #1d1d1d;
-  border-radius: 12px;
+  border-radius: 5px;
   padding: 0.5rem 1rem;
   margin-top: 3rem;
 
   & > input,
   & > select {
-    height: 40px;
-  }
-
-  & > button {
-    height: 40px;
-    width: 150px;
+    display: flex;
+    align-items: center;
   }
 `;
 
@@ -29,4 +25,9 @@ const Input = styled.input`
   ${sharedInputStyles}
 `;
 
-export { StyledForm, Input };
+const ButtonWrapper = styled.div`
+  display: flex;
+  column-gap: 1rem;
+`;
+
+export { StyledForm, Input, ButtonWrapper };

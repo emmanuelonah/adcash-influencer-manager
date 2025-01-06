@@ -1,6 +1,6 @@
 import { Influencer } from 'InfluencerTypes';
 import { composeClassNames as cx } from 'utils';
-import { Modal, AsyncRenderer, SelectManager, PrimaryButton, LinkButton } from 'components';
+import { Modal, AsyncRenderer, SelectManager, SecondaryButton, LinkButton } from 'components';
 
 import { useForm } from './useForm';
 import { StyledForm, Input } from './form.styles';
@@ -51,6 +51,7 @@ export function Form() {
           placeholder="Instagram username"
           value={userName}
           onChange={(ev) => form.onChangeInstagramHandle(ev, i)}
+          required
         />
       ))}
       <LinkButton type="button" onClick={form.addTiktokInput}>
@@ -63,9 +64,10 @@ export function Form() {
           placeholder="Tiktok username"
           value={userName}
           onChange={(ev) => form.onChangeTiktokHandle(ev, i)}
+          required
         />
       ))}
-      <PrimaryButton type="submit">Submit</PrimaryButton>
+      <SecondaryButton type="submit">Submit</SecondaryButton>
     </StyledForm>
   );
 }

@@ -1,14 +1,18 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+
+const sharedButtonStyles = css`
+  border: none;
+  border-radius: 5px;
+  font-size: 0.75rem;
+  padding: 0.5rem;
+  min-width: 100px;
+  height: 36px;
+`;
 
 const PrimaryButton = styled.button`
-  border: none;
+  ${sharedButtonStyles}
   background-color: #1f1f1f;
-  border-radius: 12px;
   color: #797979;
-  font-size: 0.75rem;
-  padding: 1rem 0.5rem;
-  width: 100%;
-  max-width: 100px;
 
   &:hover {
     background-color: #2f2f2f;
@@ -16,12 +20,25 @@ const PrimaryButton = styled.button`
 `;
 
 const SecondaryButton = styled.button`
-  border: none;
+  ${sharedButtonStyles}
   background-color: #102319;
   color: #51b380;
-  padding: 0.5rem;
-  border-radius: 10px;
-  font-size: 0.75rem;
+
+  &:hover {
+    background-color: #1a2f1e;
+    transition: background-color 0.5s ease;
+  }
+`;
+
+const DangerButton = styled.button`
+  ${sharedButtonStyles}
+  color: #fff;
+  background-color: #c82333;
+
+  &:hover {
+    background-color: #d32f3f;
+    transition: background-color 0.5s ease;
+  }
 `;
 
 const LinkButton = styled.button`
@@ -32,4 +49,4 @@ const LinkButton = styled.button`
   text-decoration: underline;
 `;
 
-export { PrimaryButton, SecondaryButton, LinkButton };
+export { PrimaryButton, SecondaryButton, DangerButton, LinkButton };

@@ -26,6 +26,10 @@ function useGetInfluencersPresenter() {
     setQueryString(query);
   }, []);
 
+  const onReset = useCallback((_event: React.MouseEvent<HTMLButtonElement>) => {
+    setQueryString('');
+  }, []);
+
   const data = query.data || [];
   const error = InfluencerModel.parseError(
     query.isError,
@@ -39,6 +43,7 @@ function useGetInfluencersPresenter() {
     data,
     error,
     onFilter,
+    onReset,
   };
 }
 

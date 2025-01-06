@@ -11,11 +11,12 @@ import { AddInfluencer, AddInfluencerWrapper } from './index.styles';
 import { SocialMediaHandles } from './components/social-media-handles';
 
 export function Home() {
-  const { isLoading, error, data, hasData, onFilter } = useGetInfluencersPresenter();
+  const { isLoading, error, data, hasData, onFilter, onReset } = useGetInfluencersPresenter();
 
   return (
     <PageWrapper>
-      <Table.FilterWidget onFilter={onFilter} />
+      <title>🛖 Home | Adcash influencer manager</title>
+      <Table.FilterWidget onFilter={onFilter} onReset={onReset} />
       <AddInfluencerWrapper>
         <AddInfluencer to={ROUTES.createInfluencer}>Add influencer</AddInfluencer>
       </AddInfluencerWrapper>
@@ -50,7 +51,9 @@ export function Home() {
                   </Table.Td>
                   <Table.Td>{formatDate(influencer.createdAt)}</Table.Td>
                   <Table.Td>
-                    <Table.EditorWidget>
+                    <Table.EditorWidget
+                      title={`Update ${influencer.firstName} ${influencer.lastName} Manager`}
+                    >
                       <EditInfluencer influencerId={influencer._id} />
                     </Table.EditorWidget>
                   </Table.Td>

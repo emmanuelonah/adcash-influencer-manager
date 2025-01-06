@@ -18,8 +18,14 @@ const Header = styled.div`
   padding: 1rem;
   height: 5rem;
   border-bottom: solid 1px #1d1d1d;
-  display: flex;
-  align-items: center;
+  width: 100%;
+
+  & h1 {
+    transform: translateY(-50%);
+    text-align: center;
+    font-weight: ${(props) => props.theme.typography.title3.fontWeight};
+    font-size: ${(props) => props.theme.typography.title3.fontSize};
+  }
 `;
 
 const Body = styled.div`

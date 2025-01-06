@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const StyledForm = styled.form`
   background-color: #0f0f0f;
-  border-radius: 12px;
+  border-radius: 5px;
   border: solid 1px #1d1d1d;
   width: 100%;
   max-width: 350px;

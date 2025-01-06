@@ -11,9 +11,10 @@ describe('<EditorWidget/>', () => {
   });
 
   it('toggles open state when Edit button is clicked', () => {
-    renderWithOptions(<EditorWidget>Content</EditorWidget>);
+    renderWithOptions(<EditorWidget title="Edit content">Content</EditorWidget>);
     const editButton = screen.getByText('Edit');
     fireEvent.click(editButton);
+    expect(screen.queryByText('Edit content')).toBeInTheDocument();
     expect(screen.getByText('Cancel')).toBeInTheDocument();
   });
 

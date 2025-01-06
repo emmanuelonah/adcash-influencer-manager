@@ -2,7 +2,7 @@ import React from 'react';
 
 import { renderWithOptions, screen } from 'utils';
 
-import { PrimaryButton, SecondaryButton, LinkButton } from './index.component';
+import { PrimaryButton, SecondaryButton, DangerButton, LinkButton } from './index.component';
 
 describe('<Button/>', () => {
   it('renders PrimaryButton with correct styles', () => {
@@ -15,6 +15,12 @@ describe('<Button/>', () => {
     renderWithOptions(<SecondaryButton>Secondary Button</SecondaryButton>);
 
     expect(screen.getByRole('button')).toHaveTextContent('Secondary Button');
+  });
+
+  it('renders DangerButton with correct styles', () => {
+    renderWithOptions(<DangerButton>Danger Button</DangerButton>);
+
+    expect(screen.getByRole('button')).toHaveTextContent('Danger Button');
   });
 
   it('renders LinkButton with correct styles', () => {

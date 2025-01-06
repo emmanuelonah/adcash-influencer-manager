@@ -2,7 +2,7 @@ import React from 'react';
 
 import { StoryFn, Meta } from '@storybook/react';
 
-import { NotFound } from './index.component';
+import { NotFound } from './index.view';
 
 export default {
   title: 'Views/NotFound',

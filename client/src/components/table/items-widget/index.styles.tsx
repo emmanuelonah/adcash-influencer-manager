@@ -5,44 +5,42 @@ const stylesReset = css`
   padding: 0;
   background: none;
   border: none;
-  border-collapse: collapse;
-  border-spacing: 0;
   background-image: none;
-  display: block;
 `;
 
 const Table = styled.table`
   ${stylesReset}
+  border-collapse: collapse;
+  border-spacing: 0;
   background-color: #171717;
-  border-radius: 12px;
+  border-radius: 5px;
+  border-collapse: separate;
+  border-spacing: 0;
   width: 100%;
-  min-height: calc(100vh - 200px);
+  height: calc(100vh - 400px);
   margin: 0 auto;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
   border: solid 1px #1d1d1d;
 `;
 
 const Thead = styled.thead`
   ${stylesReset}
-  background-color: #1f1f1f;
-  border-radius: 12px;
   color: #797979;
   text-align: left;
   font-size: 0.75rem;
-  padding: 1rem;
   margin-bottom: 2rem;
 `;
 
 const TheadRow = styled.tr`
   ${stylesReset}
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  height: 24px;
 `;
 
 const Th = styled.th`
   ${stylesReset}
   font-weight: lighter;
+  padding: 8px;
+  text-align: left;
 `;
 
 const Tbody = styled.tbody`
@@ -52,20 +50,18 @@ const Tbody = styled.tbody`
 const TbodyRow = styled.tr`
   ${stylesReset}
   color: #E2E2E2;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   font-size: 0.8rem;
-  padding: 1.2rem 1rem;
+  height: 24px;
 
   &:hover {
     background-color: #1f1f1f;
-    border-radius: 12px;
+    border-radius: 5px;
   }
 `;
 
 const Td = styled.td`
   ${stylesReset}
+  padding: 8px;
   font-weight: lighter;
   text-align: left;
 `;

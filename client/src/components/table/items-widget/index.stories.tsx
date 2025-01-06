@@ -2,7 +2,7 @@ import React from 'react';
 
 import { StoryFn, Meta } from '@storybook/react';
 
-import Table from './index';
+import Table from '..';
 
 export default {
   title: 'Components/Table',

@@ -15,7 +15,7 @@ const ListItem = styled.li`
 
   &:hover {
     background-color: #1f1f1f;
-    border-radius: 12px;
+    border-radius: 5px;
   }
 `;
 

@@ -1,11 +1,6 @@
 import React from 'react';
 
-import { Loader } from './loader';
-import { TableBody } from './body';
-import { TableHeader } from './header';
-import { EditorWidget } from '../editor-widget';
-import { FilterWidget } from '../filter-widget/index.component';
-import { Table as TableNode, TbodyRow, Th, Td } from './index.styles';
+import { Table as StyledTable } from './index.styles';
 
 type TableSectionProps =
   | JSX.IntrinsicElements['thead']
@@ -16,18 +11,6 @@ type TableProps = {
   children: React.ReactElement<TableSectionProps> | React.ReactElement<TableSectionProps>[];
 };
 
-function Table(props: Readonly<TableProps>) {
-  return <TableNode>{props.children}</TableNode>;
+export function Table(props: Readonly<TableProps>) {
+  return <StyledTable>{props.children}</StyledTable>;
 }
-
-export default {
-  Root: Table,
-  Header: TableHeader,
-  Body: TableBody,
-  Tr: TbodyRow,
-  Th,
-  Td,
-  Loader,
-  EditorWidget,
-  FilterWidget,
-};

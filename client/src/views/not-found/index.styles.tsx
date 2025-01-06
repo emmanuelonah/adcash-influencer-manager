@@ -2,8 +2,6 @@ import styled from 'styled-components';
 
 import { Link } from 'react-router-dom';
 
-import { Heading1 } from 'components';
-
 const Wrapper = styled.div`
   display: flex;
   justify-content: center;
@@ -12,7 +10,7 @@ const Wrapper = styled.div`
   padding: 1rem;
 `;
 
-const Heading = styled(Heading1)`
+const Heading = styled.h1`
   display: inline-block;
   margin: 0rem 1.25rem 0rem 0rem;
   padding-right: 1.25rem;

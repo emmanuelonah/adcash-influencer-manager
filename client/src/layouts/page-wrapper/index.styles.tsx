@@ -8,7 +8,7 @@ const SharedStyles = css`
 `;
 
 const Header = styled.header`
-  padding: 1rem;
+  padding: 1rem 2rem;
   height: 5rem;
   border-bottom: solid 1px #1d1d1d;
   display: flex;

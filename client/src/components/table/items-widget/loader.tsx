@@ -13,7 +13,7 @@ const shimmer = keyframes`
 
 const SkeletonLoader = styled.div`
   background-color: #171717;
-  border-radius: 12px;
+  border-radius: 5px;
   width: 100%;
   min-height: calc(100vh - 200px);
   max-width: 1420px;
@@ -43,7 +43,7 @@ const SkeletonLoader = styled.div`
 const Header = styled.div`
   background-color: #1f1f1f;
   border: solid 1px #252525;
-  border-radius: 12px;
+  border-radius: 5px;
   color: #797979;
   text-align: left;
   font-size: 0.75rem;
@@ -55,7 +55,7 @@ const Header = styled.div`
 
 const Row = styled.div`
   background-color: #1f1f1f;
-  border-radius: 12px;
+  border-radius: 5px;
   display: flex;
   justify-content: space-between;
   margin-bottom: 1rem;

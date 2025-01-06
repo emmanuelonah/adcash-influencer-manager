@@ -1,5 +1,5 @@
 import { Influencer } from 'InfluencerTypes';
-import { AsyncRenderer, SelectManager, PrimaryButton, Modal } from 'components';
+import { AsyncRenderer, SelectManager, SecondaryButton, Modal } from 'components';
 
 import { StyledForm } from './edit-influencer.styles';
 import { useEditInfluencer } from './useEditInfluencer';
@@ -25,7 +25,7 @@ export function EditInfluencer({ influencerId }: Readonly<EditInfluencerProps>) 
         )}
       </AsyncRenderer>
       <SelectManager placeholder="Update manager" required />
-      <PrimaryButton type="submit">Save</PrimaryButton>
+      <SecondaryButton type="submit">Save</SecondaryButton>
     </StyledForm>
   );
 }

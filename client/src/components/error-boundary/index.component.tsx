@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { __DEV__ } from 'utils/env/index.util';
-import { Heading2 } from 'components/headings/index.component';
 
 import iconJson from './icon-json.png';
 import iconRefresh from './icon-refresh.png';
@@ -43,7 +42,7 @@ export class ErrorBoundary extends React.Component<
       return (
         <Wrapper>
           <img src={iconJson} alt="" />
-          <Heading2>Oops, compilation error {`</>`}</Heading2>
+          <h1>Oops, compilation error {`</>`}</h1>
           <Refresh type="button" onClick={() => window.location.reload()}>
             <img src={iconRefresh} alt="" />
             <span>Try again?</span>
