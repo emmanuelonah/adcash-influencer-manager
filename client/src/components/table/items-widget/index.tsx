@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Table as StyledTable } from './index.styles';
+import { Table as StyledTable, TableContainer } from './index.styles';
 
 type TableSectionProps =
   | JSX.IntrinsicElements['thead']
@@ -12,5 +12,9 @@ type TableProps = {
 };
 
 export function Table(props: Readonly<TableProps>) {
-  return <StyledTable>{props.children}</StyledTable>;
+  return (
+    <TableContainer>
+      <StyledTable>{props.children}</StyledTable>
+    </TableContainer>
+  );
 }

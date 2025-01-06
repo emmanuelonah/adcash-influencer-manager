@@ -32,11 +32,6 @@ const Footer = styled.footer`
   font-size: ${({ theme }) => theme.typography.preText.fontSize};
   font-weight: lighter;
   text-align: center;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin: 0 auto;
   padding: 1rem;
 `;
 
