@@ -31,3 +31,10 @@ ensure you have setup the env variables
 cd client # check into the client directory
 
 yarn run dev # up the server
+```
+
+## Demo of the App
+
+<img src="./client/src/design-system/assets/icn-demo-home.png" alt="List influencers page">
+<img src="./client/src/design-system/assets/icn-demo-create.png" alt="Create influencer page">
+<img src="./client/src/design-system/assets/icn-demo-update.png" alt="Update influencer page">
