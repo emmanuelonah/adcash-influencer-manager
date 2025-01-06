@@ -66,22 +66,30 @@ const influencerSchema = new mongoose.Schema(
 );
 
 /**
- * This pre-save hook checks if the social media usernames are unique.
- * It throws an error if there are duplicate usernames.
+ * This pre-save hook checks if the social media handles are unique within the same document or collection.
+ * This is to prevent duplicate social media handles within the same influencer or across different influencers.
+ * This helps prevent impersonation and ensures that each influencer has a unique social media handle.
  */
 influencerSchema.pre<InfluencerResponse>('save', async function (next) {
-    const handles = this.socialMediaHandles;
+    const { socialMediaHandles } = this;
     const InfluencerModel = this.constructor as Model<InfluencerResponse>;
-    const duplicateUsernames = await InfluencerModel.find({
-        _id: { $ne: this._id },
-        'socialMediaHandles.userName': { $in: handles.map((h) => h.userName) },
-    });
 
-    if (duplicateUsernames.length > 0) {
+    // Check for internal duplicates within the same document
+    const uniqueHandles = new Set(socialMediaHandles.map((handle) => `${handle.type}:${handle.userName}`));
+    if (uniqueHandles.size !== socialMediaHandles.length) {
+        return next(new HttpException(409, 'Social media handles must be unique within the same influencer.'));
+    }
+
+    // Check for external duplicates across documents
+    const existingDuplicates = await InfluencerModel.findOne({
+        _id: { $ne: this._id },
+        socialMediaHandles: { $elemMatch: { userName: { $in: socialMediaHandles.map((h) => h.userName) } } },
+    });
+    if (existingDuplicates) {
         return next(new HttpException(409, 'Some social media usernames already exist.'));
     }
 
-    return next();
+    next();
 });
 
 export const Influencer = mongoose.model('Influencer', influencerSchema);
