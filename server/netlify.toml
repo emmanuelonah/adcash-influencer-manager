@@ -4,7 +4,7 @@ command = "yarn && yarn run build"
 publish = "build"
 
 [functions]
-external_node_modules = ["express"]
+external_node_modules = ["express", "mongoose"]
 node_bundler = "esbuild"
 
 [[redirects]]
