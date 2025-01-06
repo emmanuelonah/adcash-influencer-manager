@@ -1,7 +1,7 @@
 [build]
 base = "server"
 command = "yarn && yarn run build"
-publish = "server/build"
+publish = "build"
 
 [functions]
 external_node_modules = ["express"]
