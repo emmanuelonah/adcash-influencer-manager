@@ -31,6 +31,6 @@ type Influencer = {
     manager: Manager;
 };
 
-export interface InfluencerRequest extends Influencer {}
+export type InfluencerRequest = Influencer;
 
-export interface InfluencerResponse extends Influencer, Document {}
+export type InfluencerResponse = Influencer & Document;

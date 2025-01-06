@@ -1,11 +1,11 @@
 import { HttpException } from '../http-exception/index.service';
 
-export interface SuccessType<DataType> {
+export type SuccessType<DataType> = {
     success: boolean;
     data: DataType;
-}
+};
 
-export interface ErrorType extends HttpException {}
+export type ErrorType = HttpException;
 
 export class ApiResponse {
     public static error(statusCode: number, message: string) {

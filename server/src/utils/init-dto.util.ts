@@ -2,10 +2,7 @@ import { validate } from 'class-validator';
 
 import { HttpException } from '../services/http-exception/index.service';
 
-export async function initDto<DTO = ObjectConstructor, ReqBody = Object>(
-    Dto: DTO,
-    reqBody: ReqBody
-) {
+export async function initDto<DTO = ObjectConstructor, ReqBody = object>(Dto: DTO, reqBody: ReqBody) {
     const dto = Object.assign(new (Dto as ObjectConstructor)(), reqBody);
     const errors = await validate(dto);
     const hasErrors = !!errors.length;
