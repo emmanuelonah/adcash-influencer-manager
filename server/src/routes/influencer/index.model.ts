@@ -10,10 +10,18 @@ export class InfluencerModel {
         return Influencer.find().lean().exec();
     }
 
+    private static insensitiseQuery(key: string, value: string | undefined) {
+        if (value) {
+            return { [key]: { $regex: value, $options: 'i' } };
+        }
+
+        return {};
+    }
+
     public static getByNameOrManager({ firstName, lastName, managerId }: InfluencerQueryParams) {
-        const query = {
-            ...(firstName && { firstName }),
-            ...(lastName && { lastName }),
+        const query: Record<string, object | string> = {
+            ...this.insensitiseQuery('firstName', firstName),
+            ...this.insensitiseQuery('lastName', lastName),
             ...(managerId && { 'manager.id': managerId }),
         };
 
