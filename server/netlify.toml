@@ -1,0 +1,14 @@
+[build]
+base = "."
+command = "yarn && yarn run build"
+publish = "build"
+
+[functions]
+external_node_modules = ["express"]
+node_bundler = "esbuild"
+
+[[redirects]]
+force = true
+from = "/api/v1/*"
+status = 200
+to = "/.netlify/functions/api/v1/:splat"
