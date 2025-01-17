@@ -37,6 +37,17 @@ const GlobalStyles = createGlobalStyle<Theme>`
         box-sizing: border-box;
     }
 
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    ::-webkit-scrollbar {
+    display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    html {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    }
+
     html, body {
         font-family: ${({ theme }) => theme.typography.fontFamilies.primary};
         font-size: ${({ theme }) => theme.typography.bodyText.fontSize};
