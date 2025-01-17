@@ -80,6 +80,30 @@ export function useForm() {
     [validateInstagramInput]
   );
 
+  const onRemoveTiktokHandle = useCallback((index: number) => {
+    setTiktokHandles((prev) => {
+      const newHandles = [...prev];
+      newHandles.splice(index, 1);
+      return newHandles;
+    });
+  }, []);
+
+  const onRemoveInstagramHandle = useCallback((index: number) => {
+    setInstagramHandles((prev) => {
+      const newHandles = [...prev];
+      newHandles.splice(index, 1);
+      return newHandles;
+    });
+  }, []);
+
+  const resetForm = useCallback(() => {
+    setFirstName('');
+    setLastName('');
+    setManager(DEFAULT_MANAGER);
+    setTiktokHandles(DEFAULT_TIKTOK);
+    setInstagramHandles(DEFAULT_INSTAGRAM);
+  }, []);
+
   const onSubmit = useCallback(
     (event: React.FormEvent<HTMLFormElement>) => {
       event.preventDefault();
@@ -92,9 +116,9 @@ export function useForm() {
       };
 
       mutate(data);
-      event.currentTarget.reset();
+      resetForm();
     },
-    [firstName, instagramHandles, lastName, manager, mutate, tiktokHandles]
+    [firstName, instagramHandles, lastName, manager, mutate, resetForm, tiktokHandles]
   );
 
   return {
@@ -110,6 +134,8 @@ export function useForm() {
     addInstagramInput,
     onChangeTiktokHandle,
     onChangeInstagramHandle,
+    onRemoveTiktokHandle,
+    onRemoveInstagramHandle,
     onSubmit,
     isPending,
     isSuccess,
