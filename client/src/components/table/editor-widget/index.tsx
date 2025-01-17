@@ -15,7 +15,9 @@ export function EditorWidget({ title, children }: Readonly<EditorWidgetProp>) {
 
   return (
     <>
-      <LinkButton onClick={toggle}>Edit</LinkButton>
+      <LinkButton type="button" onClick={toggle}>
+        Edit
+      </LinkButton>
       {isOpen && (
         <Portal elementType="editorwidget">
           <Container>

@@ -24,7 +24,7 @@ describe('<Button/>', () => {
   });
 
   it('renders LinkButton with correct styles', () => {
-    renderWithOptions(<LinkButton>Link Button</LinkButton>);
+    renderWithOptions(<LinkButton type="button">Link Button</LinkButton>);
 
     expect(screen.getByRole('button')).toHaveTextContent('Link Button');
   });
