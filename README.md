@@ -43,10 +43,6 @@ yarn run dev # up the server
 
 [API documentation 🤖](https://documenter.getpostman.com/view/7240396/2sAYJ9BJpz#d95807cc-bb9a-41ad-ae05-9be7ebd86ee7)
 
-<<<<<<< Updated upstream
-## Note
-Because the api is hosted on a free tier, it might take a few seconds to load.
-=======
 ## System Design
 
 [The system design](./system-design.dio)
@@ -55,4 +51,6 @@ Because the api is hosted on a free tier, it might take a few seconds to load.
 
 <img src="./client/src/design-system/assets/icn-client-system-design.png" alt="Client system design">
 <img src="./client/src/design-system/assets/icn-server-system-design.png" alt="Server system design">
->>>>>>> Stashed changes
+
+## Note
+Because the api is hosted on a free tier, it might take a few seconds to load.
