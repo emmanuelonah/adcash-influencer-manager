@@ -44,7 +44,7 @@ export class ErrorBoundary extends React.Component<
         <Wrapper>
           <img src={iconJson} alt="" />
           <h1>Oops, compilation error {`</>`}</h1>
-          <PrimaryButton onClick={() => window.location.reload()}>
+          <PrimaryButton type="button" onClick={() => window.location.reload()}>
             <img src={iconRefresh} alt="" />
             <span>Try again?</span>
           </PrimaryButton>

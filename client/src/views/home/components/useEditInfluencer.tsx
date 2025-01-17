@@ -14,7 +14,7 @@ export function useEditInfluencer() {
         event.preventDefault();
 
         const formData = new FormData(event.currentTarget);
-        const selectedValue = formData.get('manager');
+        const selectedValue = formData.get('managerId');
         const manager = managers.find((manager) => manager.id === selectedValue) as Manager;
 
         mutate({ influencerId, manager });
