@@ -27,9 +27,21 @@ const Wrapper = styled.div`
   flex-direction: column;
   gap: 1rem;
 
-  & > img {
+  img {
     width: 18.75rem;
   }
 `;
 
-export { Wrapper };
+const Retry = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+
+  & > img {
+    width: 1.5rem;
+  }
+`;
+
+export { Wrapper, Retry };

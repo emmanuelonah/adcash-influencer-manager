@@ -6,13 +6,13 @@ import { InfluencerError, Manager } from 'InfluencerTypes';
 import { InfluencerModel } from './index.model';
 import { GET_INFLUENCERS_QUERY_KEY } from './useGetInfluencers.presenter';
 
-const UPDATE_MENU_QUERY_KEY = 'update_menu';
+const UPDATE_INFLUENCER_QUERY_KEY = 'update_influencer';
 
 function useUpdatePresenter() {
   const queryClient = useQueryClient();
 
   const { error: mutationError, ...mutation } = useMutation({
-    mutationKey: [UPDATE_MENU_QUERY_KEY],
+    mutationKey: [UPDATE_INFLUENCER_QUERY_KEY],
     mutationFn: ({ influencerId, manager }: { influencerId: string; manager: Manager }) => {
       return InfluencerModel.updateInfluencer(influencerId, { manager });
     },
@@ -30,4 +30,4 @@ function useUpdatePresenter() {
   return { ...mutation, error };
 }
 
-export { UPDATE_MENU_QUERY_KEY, useUpdatePresenter };
+export { UPDATE_INFLUENCER_QUERY_KEY, useUpdatePresenter };
