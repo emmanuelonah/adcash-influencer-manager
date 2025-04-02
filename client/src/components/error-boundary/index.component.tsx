@@ -1,12 +1,11 @@
 import React from 'react';
 
-import { PrimaryButton } from 'components';
 import { __DEV__ } from 'utils/env/index.util';
 
 import iconJson from './icon-json.png';
 import iconRefresh from './icon-refresh.png';
 
-import { Wrapper } from './index.styles';
+import { Wrapper, Retry } from './index.styles';
 
 type ErrorBoundaryPropTypes = {
   children: React.ReactNode;
@@ -44,10 +43,10 @@ export class ErrorBoundary extends React.Component<
         <Wrapper>
           <img src={iconJson} alt="" />
           <h1>Oops, compilation error {`</>`}</h1>
-          <PrimaryButton type="button" onClick={() => window.location.reload()}>
+          <Retry type="button" onClick={() => window.location.reload()}>
             <img src={iconRefresh} alt="" />
             <span>Try again?</span>
-          </PrimaryButton>
+          </Retry>
         </Wrapper>
       );
     }
