@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { ROUTES } from 'routes';
+import { FeatureFinder } from 'components';
 import { designTokens } from 'design-system';
 
 import { Header, Body, Footer, LogoLink } from './index.styles';
@@ -16,6 +17,7 @@ export function PageWrapper(props: Readonly<PageWrapperProps>) {
         <LogoLink to={ROUTES.home}>
           <designTokens.assets.IconLogo />
         </LogoLink>
+        <FeatureFinder />
       </Header>
       <Body id="main" tabIndex={-1}>
         {props.children}

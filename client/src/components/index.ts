@@ -10,4 +10,5 @@ export * from './error-boundary/index.component';
 export * from './visually-hidden/index.component';
 export * from './internet-notifier/index.component';
 export * from './select-manager/index.component';
+export * from './feature-finder/index.component';
 export { default as Table } from './table';

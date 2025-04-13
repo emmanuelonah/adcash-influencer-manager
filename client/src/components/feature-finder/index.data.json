@@ -1,0 +1,21 @@
+[
+  {
+    "id": "f1",
+    "name": "👨‍🎨 List influencers",
+    "path": "/",
+    "keywords": [
+      "list",
+      "search",
+      "List influencers",
+      "All influencers",
+      "influencer",
+      "View influencer"
+    ]
+  },
+  {
+    "id": "f2",
+    "name": "🤩 Add influencer",
+    "path": "/create-influencer",
+    "keywords": ["Add influencer"]
+  }
+]
